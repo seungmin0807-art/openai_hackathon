@@ -1,0 +1,28 @@
+{
+  "generatedWith": "built-in image_gen",
+  "transparentBackground": true,
+  "firstScene": "throat",
+  "reviewStatus": "draft, not approved",
+  "prompts": [
+    [
+      "mouth-frame",
+      "Use the supplied reference ONLY as the flat cute shape-art style and palette reference. Original children-game PNG sprite. Clean simple solid pastel colors, round bold mauve outline, no textures no tissue details no gradients no wet/glossy effects, no characters no faces no words. True transparent background. Whole sprite visible with small safe padding. One LARGE oval mouth frame seen from front: rounded pastelpink rim, four chunky ivory upper tooth blocks and four lower toothblocks. Inside opening a plain solid LIGHT lavender oval with no internal anatomy. OMIT TONGUE, TONSILS, UVULA, PALATE andalltools entirely. Empty broad lavender space inside for game elements later. Mouthclosedrim iscontinuous, containsnoface/head. Landscape5:3. This is only the fixed OUTER FRAME layer."
+    ],
+    [
+      "tongue",
+      "Use the supplied reference ONLY as the flat cute shape-art style and palette reference. Original children-game PNG sprite. Clean simple solid pastel colors, round bold mauve outline, no textures no tissue details no gradients no wet/glossy effects, no characters no faces no words. True transparent background. Whole sprite visible with small safe padding. ONE separate simple flat warm-pink semicircular tongue sprite, symbolic cartoon dome withsoftroundedtop andflatbottom, broadcute contour. No grooves no papillae no highlights. Mouth anatomybase, no mouthframe or teeth. Singleisolatedtongue shapedlike roundedpink pillow,2:1wide."
+    ],
+    [
+      "tonsil",
+      "Use the supplied reference ONLY as the flat cute shape-art style and palette reference. Original children-game PNG sprite. Clean simple solid pastel colors, round bold mauve outline, no textures no tissue details no gradients no wet/glossy effects, no characters no faces no words. True transparent background. Whole sprite visible with small safe padding. ONE separate plain smooth oval peach tonsil SYMBOL sprite, solid pale apricot oval withconsistentmauveoutline, completelyfeatureless no bumpsgroovesnodetailnosymptom. This is a symbolic teaching marker not realistic tissue. Talloval1:1.4."
+    ],
+    [
+      "uvula",
+      "Use the supplied reference ONLY as the flat cute shape-art style and palette reference. Original children-game PNG sprite. Clean simple solid pastel colors, round bold mauve outline, no textures no tissue details no gradients no wet/glossy effects, no characters no faces no words. True transparent background. Whole sprite visible with small safe padding. ONE separate symbolic palate arch +tiny hanging uvula sprite: smoothpeach upside-downU archwith a shortroundedteardrop attached atmiddle, entirely solidcolor andmauveoutline. NO wrinkles no tissues noothermouthpieces. Wide arch4:1.3."
+    ],
+    [
+      "flashlight",
+      "Use the supplied reference ONLY as the flat cute shape-art style and palette reference. Original children-game PNG sprite. Clean simple solid pastel colors, round bold mauve outline, no textures no tissue details no gradients no wet/glossy effects, no characters no faces no words. True transparent background. Whole sprite visible with small safe padding. ONE separate cute toy-like turquoise medical flashlight sprite, chunkycream handlewithtealgrip, shortroundedgoldenlightheadpointingupperleft. Entiretoolangle45degrees, largeclearhandle heldbychildbut NOhandperson. Nolightbeam no background no display digits. Chunkyflatpreschoolgameobjectlikepicturebooksticker."
+    ]
+  ]
+}

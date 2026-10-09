@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="api-base" content=""><meta name="referrer" content="same-origin">
+  <title>진료랑 놀아요! · 보호자 이야기</title>
+  <link rel="stylesheet" href="/portal/style.css">
+  <script type="module" src="/portal/shared.js"></script>
+</head>
+<body data-role="guardian">
+  <header class="site-header"><a class="brand" href="/">진료랑 놀아요!<span>진료를 알아가는 놀이</span></a><span class="role-badge">보호자</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">아이와 나누는 진료 이야기</p><h1>아이가 알아본 것,<br>함께 살펴보세요.</h1><p>어떤 진찰을 만나고, 무엇을 이야기했는지 짧게 모았어요.</p></section>
+    <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    <section id="login-panel" class="panel login-panel" aria-labelledby="login-title">
+      <h2 id="login-title">보호자 화면 연결</h2><p>병원에서 받은 보호자 접근 코드를 입력하세요.</p>
+      <form id="login-form"><label for="access-code">접근 코드</label><div class="input-action"><input id="access-code" name="accessCode" type="password" autocomplete="off" required maxlength="256"><button type="submit">연결하기</button></div></form>
+    </section>
+    <div id="dashboard" hidden>
+      <div class="section-heading"><h2>이번 방문</h2><button id="refresh" type="button" class="secondary">새로고침</button></div>
+      <section id="visit-summary" class="panel visit-summary" aria-label="방문 놀이 정보"></section>
+      <section class="report-section" aria-labelledby="report-title"><div class="section-heading"><h2 id="report-title">놀이 후, 아이의 이야기</h2><span id="report-count" class="field-help"></span></div><div id="reports" class="report-list"></div></section>
+      <section class="together"><h3>집에서도 이야기해 보세요</h3><p>“오늘 만난 도구가 무슨 일을 했지?” 아이가 떠올린 내용을 천천히 들어주세요.</p></section>
+    </div>
+  </main><footer>진료랑 놀아요!의 놀이 기록은 검사 결과나 진단이 아닙니다.</footer>
+</body></html>

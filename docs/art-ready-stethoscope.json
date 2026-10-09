@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "stethoscope",
+  "status": "candidate-awaiting-user-review",
+  "createdDate": "2026-10-09",
+  "generationMode": "built-in image_gen",
+  "connectedToMainCode": false,
+  "world": {
+    "width": 800,
+    "height": 500
+  },
+  "coordinateSystem": "x/y are layer centers; image rendered with object-fit:contain",
+  "alphaHitThreshold": 16,
+  "style": "Simple rounded pastel 2D illustration; symbolic organs; no characters, photoreal tissue, 3D, or child-facing layer controls.",
+  "assets": [
+    {
+      "layerId": "chest-frame",
+      "src": "/assets/candidates/stethoscope/chest-frame-v1.png",
+      "x": 350,
+      "y": 240,
+      "width": 500,
+      "height": 340,
+      "z": 1
+    },
+    {
+      "layerId": "lung-left",
+      "src": "/assets/candidates/stethoscope/lung-left-v1.png",
+      "x": 260,
+      "y": 220,
+      "width": 90,
+      "height": 130,
+      "z": 2
+    },
+    {
+      "layerId": "lung-right",
+      "src": "/assets/candidates/stethoscope/lung-right-v1.png",
+      "x": 440,
+      "y": 220,
+      "width": 90,
+      "height": 130,
+      "z": 2
+    },
+    {
+      "layerId": "heart",
+      "src": "/assets/candidates/stethoscope/heart-v1.png",
+      "x": 350,
+      "y": 260,
+      "width": 80,
+      "height": 95,
+      "z": 3
+    },
+    {
+      "layerId": "stethoscope-tool",
+      "src": "/assets/candidates/stethoscope/stethoscope-tool-v1.png",
+      "x": 680,
+      "y": 370,
+      "width": 140,
+      "height": 160,
+      "z": 8,
+      "draggable": true,
+      "rotation": 0,
+      "contactAnchor": {
+        "x": 0.258389,
+        "y": 0.724832
+      },
+      "contactPointNativePixels": {
+        "x": 303,
+        "y": 972
+      },
+      "contactPointNativeAlpha": 253,
+      "contactPointSlotPixels": {
+        "x": 36.17446,
+        "y": 115.97312
+      },
+      "contactDiscDisplayDiameterApprox": 46,
+      "requiredIntegration": "Apply contactAnchor along with src. Default center lies in transparent space. Keep rotation=0 because renderer contact computation does not rotate the anchor."
+    }
+  ],
+  "regionProposal": {
+    "mode": "retain existing preset regions",
+    "reason": "Current SceneRenderer.regionAt requires both region membership and target PNG alpha>16; transparent margins are already excluded.",
+    "centersHitActualAlpha": true,
+    "effectiveTargetFraction": {
+      "heart": 0.6825423444574878,
+      "lungLeft": 0.69072277335659,
+      "lungRight": 0.6919219448381119
+    },
+    "notes": "Debug ellipses extend beyond irregular organ silhouettes. Effective success area is ellipse intersect actual alpha, not the entire debug ellipse."
+  },
+  "previews": {
+    "plain": "artifacts/art-review/stethoscope-v1-plain.png",
+    "guides": "artifacts/art-review/stethoscope-v1-guides.png",
+    "heartContact": "artifacts/art-review/stethoscope-v1-heart-contact.png"
+  },
+  "audit": "artifacts/art-review/stethoscope-v1-audit.json",
+  "promptManifest": "public/assets/candidates/stethoscope/prompts-v1.json",
+  "sources": {
+    "chest-frame": {
+      "tool": "built-in image_gen",
+      "originalPath": "C:/Users/uudra/.codex/generated_images/01a11e89-c0dd-7423-ad64-1fc5949e236c/exec-cb75de2e-5cc6-424a-80d7-1e8b7490794b.png",
+      "prompt": "Use case: scientific-educational. Asset type: individual transparent PNG sprite for a gentle 2D medical familiarization game. Generate ONLY a symbolic front-facing upper chest silhouette, headless, no face, no character. Centered broad rounded shoulders, very short neck stump at top, gently narrowing sides, softly rounded lower edge, no arms/hands. Flat warm pale peach fill #E8D8C8, smooth muted plum outline, subtle restrained tonal gradient, clean polished 2D storybook illustration. Wide landscape composition about 25:17, designed to fit a 500x340 pixel slot. Whole silhouette fully visible with 3-5% transparent margin. Chest interior must remain completely plain and uncluttered, to accept separate lung and heart sprites later. No organs, ribs, nipples, muscles, clothing, inner anatomy, wound, text, UI, badge, background shadow or ground. No realism, 3D, skin texture, medical photo or cutaway. Genuinely transparent background, preserve alpha. This is one isolated body-part sprite, not a complete scene."
+    },
+    "lung-left": {
+      "tool": "built-in image_gen",
+      "originalPath": "C:/Users/uudra/.codex/generated_images/01a11e89-c0dd-7423-ad64-1fc5949e236c/exec-efacd18c-5606-4d19-ab8e-d60bdba27352.png",
+      "prompt": "Use case: scientific-educational. Asset type: ONE isolated transparent PNG organ sprite for a gentle 2D medical familiarization game. Subject: ONLY the lung placed on the LEFT SIDE OF THE SCREEN, a tall rounded soft bean silhouette, fuller convex outer edge on LEFT and a small inward concave curve on RIGHT. No trachea or branches, no pair of lungs. Simple symbolic blue lung, pale dusty sky blue #A9CFD8 fill, smooth muted plum outline, one restrained curved blue internal line at most. Clean polished flat 2D storybook style, subtle gradient only, no texture. Portrait canvas about 9:13, entire lung centered and filling 90-94% of canvas height and width, small even transparent margin, designed for 90x130 pixel game slot and readable at that size. Bold enough outline to appear 2-3 pixels at the final display size. Fully solid filled center. Genuinely transparent background, alpha preserved. No face, eyes, limbs, gore, veins, pores, realistic anatomy texture, 3D, highlights that imply shiny plastic, text, UI, symbols, shadow or ground. No other objects or body outline."
+    },
+    "lung-right": {
+      "tool": "built-in image_gen",
+      "originalPath": "C:/Users/uudra/.codex/generated_images/01a11e89-c0dd-7423-ad64-1fc5949e236c/exec-5e044f7c-198c-46d3-80b4-37f140d0a0d5.png",
+      "prompt": "Use case: precise-object-edit. Asset: separate transparent PNG for the lung on the RIGHT SIDE OF THE SCREEN in a 2D game. Edit the provided isolated blue lung: reflect the silhouette and internal curved line horizontally so the fuller convex edge is on the RIGHT and the inner concavity is on the LEFT. Keep the same flat dusty sky blue fill, smooth muted plum outline, subtle tonal gradient, simple symbolic style, proportions, portrait framing, small transparent padding and solid filled center. Output ONLY this one horizontally mirrored lung, not a pair, no body, branches, text, face, extra objects or shadow. Genuinely transparent background with preserved alpha. Whole lung must fit inside the image with a small clear margin. This is a new separate companion sprite, do not add labels.",
+      "referenceAsset": "lung-left-v1.png",
+      "operation": "ImageGen horizontal companion edit"
+    },
+    "heart": {
+      "tool": "built-in image_gen",
+      "originalPath": "C:/Users/uudra/.codex/generated_images/01a11e89-c0dd-7423-ad64-1fc5949e236c/exec-44f75533-876e-4134-a475-9d10f6f47f51.png",
+      "prompt": "Use case: scientific-educational. Asset type: ONE individual transparent PNG heart-symbol sprite for a gentle 2D medical familiarization game. Only a simple rounded coral heart symbol, two soft upper lobes with a gentle center notch, a rounded taper at the bottom, slightly tall and subtly asymmetric, warm dusty coral #E5A39E fill, smooth muted plum outline, restrained soft tonal gradient. Clean flat polished 2D storybook illustration, matching pale blue symbolic lung illustrations. Fully filled solid center, no internal empty holes. Portrait composition about 16:19, sized to fit an 80x95 pixel game slot, heart occupies 90-94% of canvas with small transparent margin. Outline appears 2-3 pixels at final game size. Entire symbol fully visible. Genuinely transparent background, preserve alpha. No vessels, arteries, blood, anatomical texture, face, eyes, character, limbs, gloss, 3D, photorealism, text, UI, extra motifs, shadow or ground. One single sprite only."
+    },
+    "stethoscope-tool": {
+      "tool": "built-in image_gen",
+      "originalPath": "C:/Users/uudra/.codex/generated_images/01a11e89-c0dd-7423-ad64-1fc5949e236c/exec-04a9dade-4643-464b-8b64-988f8b0b5042.png",
+      "prompt": "Use case: scientific-educational. Asset type: ONE separate transparent PNG draggable stethoscope sprite for a gentle 2D medical familiarization game. Subject: a compact recognizable stethoscope, front view in the picture plane. Two short curved silver-and-cream ear stems at top with rounded eartips, a single thick sage teal rubber tube shaped as a broad gentle U, and ONE large round silver chestpiece with pale cream center and teal rim at LOWER LEFT. The chestpiece face must point straight towards viewer as a clear perfect circle, center around x=28%, y=75% of canvas, diameter around 28% of canvas width; it is the game contact point. Entire tool must be compact and fully visible, centered across a portrait canvas about 7:8, small 4-6% clear transparent margin. Designed for 140x160 pixel game slot. Palette sage teal #77B1AC, cream, pale silver, smooth muted plum outline. Polished flat 2D storybook illustration, very restrained gentle tonal fills; enough outline to show at 2-3 pixels at final display size. Tubing thickness generous for small hands to drag. No shiny 3D chrome, photographic detail, hard perspective, hands, body, organ, character, face, eyes, extra icons, text, UI, detached parts, coiled cable clutter, background shadow or ground. Only one complete stethoscope. Genuinely transparent background and preserve alpha."
+    }
+  },
+  "review": {
+    "bodyArt": "Independent visual review passed; mild chest shading is stylized, no tissue texture.",
+    "toolArt": "Independent contact-disc center review passed; center alpha 253, default canvas center alpha 0.",
+    "placement": "Independent alpha and browser review passed: all 5 corner alphas zero; no opaque bounds touch native edges; all world bounds fit; pageErrors=[]; body-tool visible gap about 71px.",
+    "pending": "User visual review before promoting the candidate assets."
+  },
+  "validation": {
+    "method": "Actual mouse pointer drags in SceneRenderer with candidate assets applied in browser memory",
+    "result": "passed",
+    "sequence": ["ready continue", "heart-target drop", "lung-left-target drop", "lung-right-target drop", "why continue"],
+    "finalProcessIndex": 4,
+    "done": true,
+    "contactMatchesExpectedRegion": true,
+    "toolFitsWorldAtAllThreeTargets": true,
+    "opaqueBoundsClipped": false,
+    "pageErrors": [],
+    "note": "At heart contact, the tube naturally overlaps part of the right lung. The contact disc reaches the heart center."
+  },
+  "integrationInstructions": [
+    "Only after candidate review, apply assets src bindings and tool contactAnchor to stethoscope preset. This candidate task has not changed scene-presets.js or any main code.",
+    "Preserve original PNG alpha; do not crop, recolor, mirror, or erase pixels through code.",
+    "Retain individually movable layers and existing sequential steps; no merged scene background or anatomy-layer UI.",
+    "Preview images are browser captures of real renderer slots, not generated whole-scene art."
+  ]
+}

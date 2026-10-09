@@ -1,0 +1,5 @@
+{
+  "services": {"tts": {"root": ".", "entrypoint": "Dockerfile.vercel", "runtime": "container"}},
+  "rewrites": [{"source": "/(.*)", "destination": {"service": "tts"}}],
+  "regions": ["icn1"]
+}

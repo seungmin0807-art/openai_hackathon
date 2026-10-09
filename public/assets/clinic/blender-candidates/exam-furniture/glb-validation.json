@@ -1,0 +1,146 @@
+{
+  "loader": "Three.js 186",
+  "results": [
+    {
+      "name": "exam-bed",
+      "bytes": 973960,
+      "meshCount": 6,
+      "drawCallEstimate": 6,
+      "triangles": 38420,
+      "bounds": [
+        -1.0750000476837158,
+        0,
+        -1.7999999523162842,
+        1.0750000476837158,
+        1.1800010204315186,
+        1.7999999523162842
+      ],
+      "sizeGameUnits": [
+        2.1500000953674316,
+        1.1800010204315186,
+        3.5999999046325684
+      ],
+      "floorHeight": 0,
+      "rootMetadata": {
+        "name": "exam-bed.001",
+        "license": "CC0-1.0",
+        "units": "clinic game units",
+        "front_axis": "+Z",
+        "top_surface_height": 0.98,
+        "floor_y": 0,
+        "origin": "Floor-centred XZ; front +Z",
+        "export_batching": "Static evaluated geometry grouped by material; original manufactured parts retained in Blender"
+      },
+      "actualSurfaceTop": 0.979997992515564,
+      "pillowRearMaxZ": -0.7500000596046448,
+      "selfContained": true,
+      "animations": []
+    },
+    {
+      "name": "stool",
+      "bytes": 1873076,
+      "meshCount": 6,
+      "drawCallEstimate": 6,
+      "triangles": 57836,
+      "bounds": [
+        -0.47999998927116394,
+        0,
+        -0.47999998927116394,
+        0.47999998927116394,
+        0.5500001311302185,
+        0.47999998927116394
+      ],
+      "sizeGameUnits": [
+        0.9599999785423279,
+        0.5500001311302185,
+        0.9599999785423279
+      ],
+      "floorHeight": 0,
+      "rootMetadata": {
+        "name": "stool.001",
+        "license": "CC0-1.0",
+        "units": "clinic game units",
+        "front_axis": "+Z",
+        "top_surface_height": 0.55,
+        "floor_y": 0,
+        "origin": "Floor-centred XZ; front +Z",
+        "export_batching": "Static evaluated geometry grouped by material; original manufactured parts retained in Blender"
+      },
+      "actualSurfaceTop": 0.5500001311302185,
+      "pillowRearMaxZ": null,
+      "selfContained": true,
+      "animations": []
+    },
+    {
+      "name": "visitor-chair",
+      "bytes": 1010976,
+      "meshCount": 4,
+      "drawCallEstimate": 4,
+      "triangles": 36500,
+      "bounds": [
+        -0.6499999761581421,
+        0,
+        -0.5600000023841858,
+        0.6499999761581421,
+        1.8499995470046997,
+        0.5600000023841858
+      ],
+      "sizeGameUnits": [
+        1.2999999523162842,
+        1.8499995470046997,
+        1.1200000047683716
+      ],
+      "floorHeight": 0,
+      "rootMetadata": {
+        "name": "visitor-chair.001",
+        "license": "CC0-1.0",
+        "units": "clinic game units",
+        "front_axis": "+Z",
+        "top_surface_height": 0.69,
+        "floor_y": 0,
+        "origin": "Floor-centred XZ; front +Z",
+        "export_batching": "Static evaluated geometry grouped by material; original manufactured parts retained in Blender"
+      },
+      "actualSurfaceTop": 0.6899996399879456,
+      "pillowRearMaxZ": null,
+      "selfContained": true,
+      "animations": []
+    },
+    {
+      "name": "privacy-screen",
+      "bytes": 2664468,
+      "meshCount": 6,
+      "drawCallEstimate": 6,
+      "triangles": 90884,
+      "bounds": [
+        -1.099999949336052,
+        0,
+        -0.3977999985218048,
+        1.1000000238419059,
+        3.700000047683716,
+        0.3800000069474774
+      ],
+      "sizeGameUnits": [
+        2.199999973177958,
+        3.700000047683716,
+        0.7778000054692822
+      ],
+      "floorHeight": 0,
+      "rootMetadata": {
+        "name": "privacy-screen.001",
+        "license": "CC0-1.0",
+        "units": "clinic game units",
+        "front_axis": "+Z",
+        "top_surface_height": 3.7,
+        "floor_y": 0,
+        "origin": "Floor-centred XZ; front +Z",
+        "export_batching": "Static evaluated geometry grouped by material; original manufactured parts retained in Blender"
+      },
+      "actualSurfaceTop": null,
+      "pillowRearMaxZ": null,
+      "selfContained": true,
+      "animations": []
+    }
+  ],
+  "totalBytes": 6522480
+}

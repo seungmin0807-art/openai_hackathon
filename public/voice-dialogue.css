@@ -1,0 +1,27 @@
+.voice-dialogue{--voice-offset:22px;--voice-width:min(360px,calc(100vw - 112px));position:fixed;z-index:146;left:var(--voice-offset);bottom:max(8px,env(safe-area-inset-bottom));width:var(--voice-width);display:flex;flex-direction:column;align-items:flex-start;gap:7px;pointer-events:none;color:#365449;font-family:inherit}
+.voice-dialogue-bubble{position:relative;box-sizing:border-box;width:100%;padding:12px 14px 11px 69px;background:#fffdf6;border:2px solid #fff;border-radius:19px;box-shadow:0 4px 0 #627f7130,0 8px 20px #334e4124;pointer-events:auto}
+/* Keep the left instrument tray touchable while the room is choosing a tool. */
+body[data-tool-choice=true] .voice-dialogue-bubble{transform:translateX(calc((100vw - var(--voice-width))/2 - var(--voice-offset)))}
+.voice-dialogue-bubble[hidden],.voice-dialogue-question[hidden],.voice-dialogue-reply[hidden]{display:none!important}
+.voice-dialogue-portrait{position:absolute;left:5px;top:-8px;width:58px;height:77px;object-fit:contain;pointer-events:none;filter:drop-shadow(0 3px 2px #59796525)}
+.voice-dialogue-heading{display:block;font-size:12px;color:#648372;font-weight:700;line-height:1.4;margin:0 0 3px}
+.voice-dialogue-question{font-size:11px;color:#718075;line-height:1.35;margin:0 0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.voice-dialogue-reply{font-size:17px;font-weight:600;line-height:1.4;margin:0;max-height:74px;overflow-y:auto;overflow-wrap:anywhere;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#a6b9a7 transparent}
+.voice-dialogue-controls{display:flex;align-items:center;gap:10px;max-width:100%;pointer-events:auto}
+.voice-dialogue-toggle{appearance:none;border:2px solid #fffaf2;border-radius:19px;background:#4f8068;color:#fffdf4;font-family:inherit;font-size:15px;font-weight:700;line-height:1.2;min-height:44px;padding:10px 16px;box-shadow:0 3px 0 #31594132;cursor:pointer;white-space:nowrap;touch-action:manipulation}
+.voice-dialogue-toggle:focus-visible{outline:3px solid #efbb65;outline-offset:3px}
+.voice-dialogue[data-enabled=false] .voice-dialogue-toggle{background:#fff8e9;color:#5c7567}
+.voice-dialogue-status{max-width:210px;font-size:13px;font-weight:600;line-height:1.4;color:#3c6451;padding:7px 10px;border-radius:13px;background:#fffaf1df}
+.voice-dialogue[data-mode=listening] .voice-dialogue-status::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#5a9670;margin-right:6px;vertical-align:1px}
+@media(orientation:landscape) and (max-height:600px){
+ .voice-dialogue{--voice-offset:12px;--voice-width:min(240px,32vw);bottom:max(6px,env(safe-area-inset-bottom));gap:5px}
+ .voice-dialogue-bubble{padding:9px 10px 9px 54px;border-width:2px;border-radius:16px}
+ .voice-dialogue-portrait{width:44px;height:59px;left:4px;top:-6px}
+ .voice-dialogue-heading{font-size:10px;margin-bottom:2px}
+ .voice-dialogue-question{font-size:10px;margin-bottom:3px}
+ .voice-dialogue-reply{font-size:14px;line-height:1.4;max-height:40px}
+ .voice-dialogue-controls{gap:6px}
+ .voice-dialogue-toggle{font-size:12px;min-height:36px;padding:8px 11px}
+ .voice-dialogue-status{font-size:11px;max-width:150px;padding:5px 7px}
+}
+@media(prefers-reduced-motion:reduce){.voice-dialogue *{animation:none!important}}

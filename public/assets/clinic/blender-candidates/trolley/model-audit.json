@@ -1,0 +1,76 @@
+{
+  "status": "trolley_modelled_exported_ready_to_render",
+  "objects": 103,
+  "triangles": 64236,
+  "bounds_blender_m": [
+    -0.36230000853538513,
+    -0.26630812883377075,
+    0,
+    0.36230000853538513,
+    0.23800000548362732,
+    0.8652999997138977
+  ],
+  "watertight_surface_audit": [
+    {
+      "object": "Shelf | lower connected enamel pan",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 1056,
+      "faces": 1030
+    },
+    {
+      "object": "Shelf | middle connected enamel pan",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 1056,
+      "faces": 1030
+    },
+    {
+      "object": "Tray | main brushed steel",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 936,
+      "faces": 902
+    },
+    {
+      "object": "Tray | small brushed steel",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 936,
+      "faces": 902
+    },
+    {
+      "object": "Caster front left | continuous moulded tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 448,
+      "faces": 448
+    },
+    {
+      "object": "Caster front right | continuous moulded tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 448,
+      "faces": 448
+    },
+    {
+      "object": "Caster rear left | continuous moulded tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 448,
+      "faces": 448
+    },
+    {
+      "object": "Caster rear right | continuous moulded tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 448,
+      "faces": 448
+    }
+  ],
+  "caster_ground_contact_z_m": 0,
+  "blend": "C:/dev/openai_hackathon/artifacts/blender-mcp/trolley/trolley.blend",
+  "glb": "C:/dev/openai_hackathon/public/assets/clinic/blender-candidates/trolley/trolley.glb",
+  "asset_license": "CC0-1.0",
+  "source_license": "MIT"
+}

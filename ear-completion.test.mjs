@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import vm from 'node:vm';import {Vector3} from 'three';import {ProcedureGame} from './public/game-engine.js';import {TOUCH_CASES} from './public/touch-cases.js';
+const src=readFileSync('public/ear-game.js','utf8');const method=src.slice(src.indexOf('update(dt){'),src.indexOf('setPaused(value){'));
+function fixture(){let now=100;const events=[],hints=[],flow=new ProcedureGame(TOUCH_CASES,()=>{});flow.select('ear');
+ const update=vm.runInNewContext('({'+method+'}).update',{performance:{now:()=>now}});
+ const color={set(){}};const sites=[{id:'canal',point:new Vector3(0,0,0),radius:.2,result:'귓길이 보이네!'},{id:'eardrum',point:new Vector3(1,0,0),radius:.2,result:'고막도 살펴봤어!'}];
+ const game={active:true,paused:false,complete:false,stage:'inspect',elapsed:0,pointer:1,aim:new Vector3(),sites,light:{intensity:0},canal:{material:{color}},drum:{material:{color}},checked:new Set(),currentSite:null,clockStart:0,dwell:0,onHint:t=>hints.push(t),emit(type,detail){events.push({type,...detail});if(type==='complete'){flow.act('3d_touch');flow.check();}},cancel(){this.pointer=null;},update};
+ return{game,events,hints,flow,look(id){game.pointer=1;game.aim.copy(sites.find(s=>s.id===id).point);game.update(.1);now+=950;game.update(.1);},advance(ms){now+=ms;game.update(.1);}};
+}
+test('eardrum first ends the examination and offers WHY without inventing a canal check',()=>{const f=fixture();f.look('eardrum');assert.equal(f.game.complete,true);assert.deepEqual([...f.game.checked],['eardrum']);assert.equal(f.flow.state.phase,'check');assert.equal(f.events.filter(e=>e.type==='complete').length,1);assert.deepEqual(Array.from(f.events.find(e=>e.type==='complete').checked),['eardrum']);});
+test('canal alone remains an interactive examination; canal then eardrum completes once',()=>{const f=fixture();f.look('canal');assert.equal(f.game.complete,false);assert.equal(f.flow.state.phase,'play');f.look('eardrum');assert.equal(f.flow.state.phase,'check');f.game.pointer=1;f.advance(5000);assert.equal(f.events.filter(e=>e.type==='complete').length,1);});
+test('passing briefly over the eardrum does not prematurely finish',()=>{const f=fixture();f.game.aim.set(1,0,0);f.game.update(.1);f.advance(300);assert.equal(f.game.complete,false);assert.equal(f.events.length,0);});

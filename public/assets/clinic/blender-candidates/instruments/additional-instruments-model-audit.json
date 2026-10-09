@@ -1,0 +1,236 @@
+{
+  "blender_version": "4.5.14 LTS",
+  "license_geometry": "CC0-1.0",
+  "license_script": "MIT",
+  "external_generation_calls": 0,
+  "render_performed": false,
+  "exports": [
+    {
+      "tool_id": "syringe",
+      "file": "C:/dev/openai_hackathon/public/assets/clinic/blender-candidates/instruments/syringe.glb",
+      "bounds_gltf_m": [
+        -0.026999998837709427,
+        -0.10300000011920929,
+        -0.019999999552965164,
+        0.026999998837709427,
+        0.12200000137090683,
+        0.019999999552965164
+      ],
+      "grip_point_gltf": [
+        0,
+        0,
+        0
+      ],
+      "contact_point_gltf": [
+        0,
+        0.122,
+        0
+      ],
+      "parts": 21,
+      "spring_present": false,
+      "bytes": 162960
+    },
+    {
+      "tool_id": "spatula",
+      "file": "C:/dev/openai_hackathon/public/assets/clinic/blender-candidates/instruments/spatula.glb",
+      "bounds_gltf_m": [
+        -0.012000000104308128,
+        -0.03999999910593033,
+        -0.0017500000540167093,
+        0.012000000104308128,
+        0.10999999940395355,
+        0.0018100000452250242
+      ],
+      "grip_point_gltf": [
+        0,
+        0,
+        0
+      ],
+      "contact_point_gltf": [
+        0,
+        0.11,
+        0
+      ],
+      "parts": 4,
+      "spring_present": null,
+      "bytes": 48864
+    }
+  ],
+  "parts_audit": [
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | connected hollow barrel",
+      "vertices": 576,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | finger flange -1",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | finger flange 1",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | fitted piston",
+      "vertices": 192,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | mint tip hub",
+      "vertices": 192,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 00",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 01",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 02",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 03",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 04",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 05",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 06",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 07",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 08",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 09",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | neutral graduation 10",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | rear barrel lip",
+      "vertices": 384,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | rounded thumb pad",
+      "vertices": 192,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | short rounded steel tip",
+      "vertices": 128,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | solid plunger shaft",
+      "vertices": 192,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "syringe",
+      "part": "Syringe | tapered nozzle",
+      "vertices": 192,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "spatula",
+      "part": "Spatula | continuous rounded wooden body",
+      "vertices": 640,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "spatula",
+      "part": "Spatula | quiet grain 0",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "spatula",
+      "part": "Spatula | quiet grain 1",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    },
+    {
+      "tool_id": "spatula",
+      "part": "Spatula | quiet grain 2",
+      "vertices": 152,
+      "connected_components": 1,
+      "non_manifold_edges": 0
+    }
+  ]
+}

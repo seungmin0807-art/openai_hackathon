@@ -1,0 +1,15 @@
+# Keep local secrets, child journals, virtual environments and game assets out
+# of this image build context. This Dockerfile only needs the listed sources.
+**
+!voice/
+!voice/service.py
+!voice/runtime.py
+!voice/download_models.py
+!voice/requirements-lock.txt
+!voice/SDK-LICENSE.txt
+!voice/MODEL-LICENSE.txt
+!deployment/
+!deployment/tts/
+!deployment/tts/entrypoint.py
+!deployment/tts/Dockerfile.vercel
+!deployment/tts/Dockerfile.vercel.dockerignore

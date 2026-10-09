@@ -1,0 +1,16 @@
+{
+  "framework": null,
+  "outputDirectory": "public",
+  "buildCommand": "npm run build:vendor",
+  "functions": {"api/index.mjs": {"maxDuration": 120}},
+  "regions": ["icn1"],
+  "rewrites": [
+    {"source": "/api/:path*", "destination": "/api/index"},
+    {"source": "/clinician", "destination": "/portal/clinician.html"},
+    {"source": "/guardian", "destination": "/portal/guardian.html"}
+  ],
+  "headers": [
+    {"source": "/api/:path*", "headers": [{"key":"Cache-Control","value":"no-store"}]},
+    {"source": "/:path*.html", "headers": [{"key":"Cache-Control","value":"no-cache"}]}
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-09",
+  "url": "http://127.0.0.1:3000/assets/clinic/blender-candidates/review.html",
+  "observed_ready_models": [
+    "clinic-room",
+    "exam-bed",
+    "patient-chair",
+    "visitor-chair",
+    "stool",
+    "privacy-screen",
+    "storage-cabinet",
+    "instrument-workbench",
+    "sink-workcounter",
+    "monitor",
+    "diagnostic-holder",
+    "window-curtains",
+    "eye-chart",
+    "plant"
+  ],
+  "final_images_loaded": [
+    "exam-furniture/render.png",
+    "room-furniture/render.png",
+    "room-architecture/render.png",
+    "render.png",
+    "trolley/render.png",
+    "instruments/render.png",
+    "stethoscope-detail.png"
+  ],
+  "final_browser_console_errors": [],
+  "new_character_options": 0,
+  "screenshot": "artifacts/blender-mcp/browser-review-final.png",
+  "gameplay_integration": true,
+  "game": {
+    "url": "http://127.0.0.1:3000/",
+    "furniture_ready": true,
+    "furniture_placements": 17,
+    "wrong_tool_feedback_observed": true,
+    "correct_tool_selected_with_keyboard": true,
+    "correct_stethoscope_mesh_clicked": {
+      "x": 276,
+      "y": 494
+    },
+    "doctor_pickup_and_approach_observed": true,
+    "patient_chest_clicked": {
+      "x": 949,
+      "y": 424
+    },
+    "examination_transition_observed": true,
+    "screenshot": "artifacts/blender-mcp/game-room-final.png",
+    "pickup_screenshot": "artifacts/blender-mcp/game-room-pickup.png",
+    "voice_or_microphone_consent_granted": false
+  },
+  "validation": {
+    "existing_tests_passed": 81,
+    "support_contact_checks": 8,
+    "visible_tool_raycasts": 6,
+    "production_geometry_validation": "room-integration-validation.json"
+  }
+}

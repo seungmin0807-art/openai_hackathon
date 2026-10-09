@@ -1,0 +1,175 @@
+{
+  "caseId": "ear",
+  "file": "ear.glb",
+  "asset": "/assets/clinic/blender-candidates/anatomy/ear.glb",
+  "units": "game-world-units",
+  "frontAxis": [
+    0,
+    0,
+    1
+  ],
+  "rootNode": "EarAnatomy",
+  "sceneScale": 0.18,
+  "scale": 0.18,
+  "nodes": {
+    "ear": "NativeRabbitPinna",
+    "pinna": "NativeRabbitPinna",
+    "canal": "EarCanal_|_connected_thick_horizontal_cutaway",
+    "eardrum": "Eardrum_|_curved_symbolic_membrane"
+  },
+  "entrance": {
+    "point": [
+      -0.550000011920929,
+      -0.07100000232458115,
+      0.024000000208616257
+    ],
+    "node": "Anchor_entrance",
+    "workingAxis": [
+      1,
+      0,
+      0
+    ]
+  },
+  "toolHome": [
+    -1.0299999713897705,
+    -0.28999999165534973,
+    0.024000000208616257
+  ],
+  "toolHomeNode": "Anchor_toolHome",
+  "toolHomeMeaning": "tool contact/tip position; subtract transformed contact offset to obtain tool root position",
+  "alignmentPlaneZ": 0.024000000208616257,
+  "dragDepth": 0.024000000208616257,
+  "toolId": "otoscope",
+  "toolOrientation": {
+    "rotationY": 1.5707963267948966,
+    "rotationRadians": [
+      0,
+      1.5707963267948966,
+      0
+    ],
+    "sourceWorkingAxis": [
+      0,
+      0,
+      1
+    ],
+    "workingAxis": [
+      1,
+      0,
+      0
+    ],
+    "scaleSigns": [
+      1,
+      1,
+      1
+    ],
+    "note": "Rotate the complete handle and speculum together around +Y. Keep all scale components positive."
+  },
+  "toolScale": 0.4166666666666667,
+  "targets": [
+    {
+      "id": "canal",
+      "name": "귓길",
+      "node": "EarCanal_|_connected_thick_horizontal_cutaway",
+      "anchor_node": "Anchor_canal",
+      "point": [
+        -0.25999999046325684,
+        -0.07100000232458115,
+        -0.05999999865889549
+      ],
+      "aimPoint": [
+        -0.25999999046325684,
+        -0.07100000232458115,
+        -0.05999999865889549
+      ],
+      "surfacePoint": [
+        -0.25999999046325684,
+        -0.07100000232458115,
+        -0.06731571220370025
+      ],
+      "radius": 0.14,
+      "result": "귓길이 보이네!"
+    },
+    {
+      "id": "eardrum",
+      "name": "고막",
+      "node": "Eardrum_|_curved_symbolic_membrane",
+      "anchor_node": "Anchor_eardrum",
+      "point": [
+        0.14900000393390656,
+        -0.07100000232458115,
+        0.11500000208616257
+      ],
+      "aimPoint": [
+        0.14900000393390656,
+        -0.07100000232458115,
+        0.11500000208616257
+      ],
+      "surfacePoint": [
+        0.14900000393390656,
+        -0.07100000232458115,
+        0.12066999405198686
+      ],
+      "radius": 0.14,
+      "result": "고막도 살펴봤어!"
+    }
+  ],
+  "stages": {
+    "align": {
+      "show_nodes": [
+        "NativeRabbitPinna",
+        "EarCanal_|_connected_thick_horizontal_cutaway",
+        "Eardrum_|_curved_symbolic_membrane"
+      ],
+      "hide_nodes": []
+    },
+    "inspect": {
+      "show_nodes": [
+        "NativeRabbitPinna",
+        "EarCanal_|_connected_thick_horizontal_cutaway",
+        "Eardrum_|_curved_symbolic_membrane"
+      ],
+      "hide_nodes": []
+    }
+  },
+  "boundsLocal": [
+    -0.8182260096073151,
+    -0.19099999964237213,
+    -0.20008079335093498,
+    0.24586661159992218,
+    1.1327777951955795,
+    0.17757095769047737
+  ],
+  "framing": {
+    "center": [
+      -0.28617969900369644,
+      0.4708888977766037,
+      -0.011254917830228806
+    ],
+    "size": [
+      1.0640926212072372,
+      1.3237777948379517,
+      0.37765175104141235
+    ]
+  },
+  "symbolic": true,
+  "source": {
+    "asset": "../../patient.glb",
+    "sha256": "c9141a0c9cd87eb7dfa9682a1d1325549aaafcf9d33310cfbaaa8263e5e80d80",
+    "author": "Quaternius",
+    "model": "Rabbit_Bald, Sushi Restaurant Kit",
+    "license": "CC0-1.0",
+    "method": "Existing detachedRabbitEar from ear-game.js, original Sitting_Idle skinned vertex positions and colors",
+    "originalCharacterModified": false,
+    "baseClosure": "Extraction attachment fragments below local glTF Y=.105 trimmed; retained ear translated down .125 and cut base capped. Retained source surface shape and vertex colors unchanged.",
+    "baseCutY": 0.105,
+    "retainedPinnaTranslation": [
+      0,
+      -0.125,
+      0
+    ]
+  },
+  "license": "CC0-1.0",
+  "sourceLicense": "MIT",
+  "renderStatus": "rendered and manually reviewed",
+  "preview": "ear.png"
+}

@@ -1,0 +1,197 @@
+{
+  "caseId": "ear",
+  "loader": "Three.js 186",
+  "bytes": 286044,
+  "meshCount": 3,
+  "triangles": 13490,
+  "finitePositions": true,
+  "sourceCharacterHashUnchanged": true,
+  "originalPinkVertices": 170,
+  "topology": [
+    {
+      "node": "EarCanal_|_connected_thick_horizontal_cutaway",
+      "triangles": 9616,
+      "weldedVertices": 4810,
+      "connectedComponents": 1,
+      "nonManifoldEdges": 0,
+      "degenerateTriangles": 0
+    },
+    {
+      "node": "Eardrum_|_curved_symbolic_membrane",
+      "triangles": 2588,
+      "weldedVertices": 1296,
+      "connectedComponents": 1,
+      "nonManifoldEdges": 0,
+      "degenerateTriangles": 0
+    },
+    {
+      "node": "Native_rabbit_ear_|_original_white_and_pink_surface",
+      "triangles": 1286,
+      "weldedVertices": 645,
+      "connectedComponents": 1,
+      "nonManifoldEdges": 0,
+      "degenerateTriangles": 0
+    }
+  ],
+  "anchors": {
+    "entrance": [
+      -0.550000011920929,
+      -0.07100000232458115,
+      0.024000000208616257
+    ],
+    "toolHome": [
+      -1.0299999713897705,
+      -0.28999999165534973,
+      0.024000000208616257
+    ],
+    "canal": [
+      -0.25999999046325684,
+      -0.07100000232458115,
+      -0.05999999865889549
+    ],
+    "eardrum": [
+      0.14900000393390656,
+      -0.07100000232458115,
+      0.11500000208616257
+    ]
+  },
+  "targets": [
+    {
+      "id": "canal",
+      "name": "귓길",
+      "node": "EarCanal_|_connected_thick_horizontal_cutaway",
+      "anchor_node": "Anchor_canal",
+      "point": [
+        -0.25999999046325684,
+        -0.07100000232458115,
+        -0.05999999865889549
+      ],
+      "aimPoint": [
+        -0.25999999046325684,
+        -0.07100000232458115,
+        -0.05999999865889549
+      ],
+      "surfacePoint": [
+        -0.25999999046325684,
+        -0.07100000232458115,
+        -0.06731571220370025
+      ],
+      "radius": 0.14,
+      "result": "귓길이 보이네!"
+    },
+    {
+      "id": "eardrum",
+      "name": "고막",
+      "node": "Eardrum_|_curved_symbolic_membrane",
+      "anchor_node": "Anchor_eardrum",
+      "point": [
+        0.14900000393390656,
+        -0.07100000232458115,
+        0.11500000208616257
+      ],
+      "aimPoint": [
+        0.14900000393390656,
+        -0.07100000232458115,
+        0.11500000208616257
+      ],
+      "surfacePoint": [
+        0.14900000393390656,
+        -0.07100000232458115,
+        0.12066999405198686
+      ],
+      "radius": 0.14,
+      "result": "고막도 살펴봤어!"
+    }
+  ],
+  "boundsLocal": [
+    -0.8182260096073151,
+    -0.19099999964237213,
+    -0.20008079335093498,
+    0.24586661159992218,
+    1.1327777951955795,
+    0.17757095769047737
+  ],
+  "blenderProof": {
+    "case_id": "ear",
+    "anchors": {
+      "entrance": [
+        -0.55,
+        -0.071,
+        0.024
+      ],
+      "toolHome": [
+        -1.03,
+        -0.29,
+        0.024
+      ],
+      "canal": [
+        -0.26,
+        -0.071,
+        -0.06
+      ],
+      "eardrum": [
+        0.149,
+        -0.071,
+        0.115
+      ]
+    },
+    "native_ear_audit": [
+      {
+        "part": "native-rabbit-ear-surface",
+        "extraction_base_cut_gltf_y": 0.105,
+        "base_translation_gltf_y": -0.125,
+        "boundary_edges_capped": 63,
+        "non_manifold_edges": 0
+      }
+    ],
+    "parts": [
+      {
+        "part": "Native rabbit ear | original white and pink surface",
+        "connected_components": 1,
+        "non_manifold_edges": 0,
+        "vertices": 645
+      },
+      {
+        "part": "EarCanal | connected thick horizontal cutaway",
+        "connected_components": 1,
+        "non_manifold_edges": 0,
+        "vertices": 4810
+      },
+      {
+        "part": "Eardrum | curved symbolic membrane",
+        "connected_components": 1,
+        "non_manifold_edges": 0,
+        "vertices": 1296
+      }
+    ],
+    "bounds_gltf": [
+      -0.8182259798049927,
+      -0.19099999964237213,
+      -0.20008079707622528,
+      0.24586661159992218,
+      1.1327778100967407,
+      0.17757095396518707
+    ],
+    "render_performed": false,
+    "external_generation_calls": 0
+  },
+  "externalGenerationCalls": 0,
+  "renderPerformed": true,
+  "render": {
+    "case_id": "ear",
+    "render_performed": true,
+    "engine": "CYCLES",
+    "device": "CPU",
+    "samples": 20,
+    "threads": 4,
+    "resolution": [
+      1000,
+      1000
+    ],
+    "png": "ear.png",
+    "bytes": 964626,
+    "sha256": "dfec60adcc0acc4291979bbb35c84fc00407db8335df4aedf2a0c15ddc1f1d1e",
+    "manuallyReviewed": true,
+    "review": "Original long white/pink rabbit pinna, clean closed base, small horizontal lavender canal and curved mint membrane; no extraction fragments."
+  }
+}

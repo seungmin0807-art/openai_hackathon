@@ -1,0 +1,174 @@
+{
+  "status": "four_exam_furnishings_modelled_exported",
+  "exports": [
+    {
+      "name": "exam-bed",
+      "original_parts": 19,
+      "batched_meshes": 6,
+      "triangles": 38420,
+      "bounds_blender": [
+        -1.0750000476837158,
+        -1.7999999523162842,
+        0,
+        1.0750000476837158,
+        1.7999999523162842,
+        1.1800010204315186
+      ]
+    },
+    {
+      "name": "stool",
+      "original_parts": 63,
+      "batched_meshes": 6,
+      "triangles": 57836,
+      "bounds_blender": [
+        -0.47999998927116394,
+        -0.47999998927116394,
+        0,
+        0.47999998927116394,
+        0.47999998927116394,
+        0.5500001311302185
+      ]
+    },
+    {
+      "name": "visitor-chair",
+      "original_parts": 18,
+      "batched_meshes": 4,
+      "triangles": 36500,
+      "bounds_blender": [
+        -0.6499999761581421,
+        -0.5600000023841858,
+        0,
+        0.6499999761581421,
+        0.5600000023841858,
+        1.8499995470046997
+      ]
+    },
+    {
+      "name": "privacy-screen",
+      "original_parts": 67,
+      "batched_meshes": 6,
+      "triangles": 90884,
+      "bounds_blender": [
+        -1.0999999046325684,
+        -0.3799999952316284,
+        0,
+        1.0999999046325684,
+        0.3977999985218048,
+        3.700000047683716
+      ]
+    }
+  ],
+  "connected_surface_audit": [
+    {
+      "object": "Bed | connected mint mattress",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 7042,
+      "faces": 7040
+    },
+    {
+      "object": "Bed | connected cotton pillow",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 7042,
+      "faces": 7040
+    },
+    {
+      "object": "Stool caster 1 | connected rubber tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Stool caster 2 | connected rubber tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Stool caster 3 | connected rubber tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Stool caster 4 | connected rubber tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Stool caster 5 | connected rubber tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Stool | connected peach cushion",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 7042,
+      "faces": 7040
+    },
+    {
+      "object": "Visitor | connected peach seat",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 7042,
+      "faces": 7040
+    },
+    {
+      "object": "Visitor | connected peach back",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 7042,
+      "faces": 7040
+    },
+    {
+      "object": "Screen caster | connected rubber tire",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Screen caster | connected rubber tire.001",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Screen caster | connected rubber tire.002",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Screen caster | connected rubber tire.003",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 384,
+      "faces": 384
+    },
+    {
+      "object": "Screen | continuous folded cloth panel",
+      "connected_components": 1,
+      "non_manifold_edges": 0,
+      "vertices": 20930,
+      "faces": 20928
+    }
+  ],
+  "source": "Original local Blender modelling",
+  "source_license": "MIT",
+  "asset_license": "CC0-1.0",
+  "units": "existing clinic game units",
+  "front_gltf": "+Z",
+  "render_pending": true
+}

@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-09",
+  "authorship": "Original local Blender Python; no external assets/generation services/API",
+  "blender_version": "4.5.14 LTS",
+  "mcp_server": {
+    "name": "MCP for Blender",
+    "title": null,
+    "version": "1.30.0",
+    "websiteUrl": null,
+    "icons": null
+  },
+  "mcp_protocol": "2025-11-25",
+  "actual_calls": [
+    "initialize",
+    "tools/list",
+    "execute_blender_code: model/save/export/render"
+  ],
+  "available_tool_names": [
+    "get_addon_status",
+    "disable_telemetry",
+    "get_scene_info",
+    "execute_blender_code",
+    "record_trajectory_feedback",
+    "look",
+    "generate_3d",
+    "search_assets",
+    "import_asset"
+  ],
+  "render": {
+    "engine": "Cycles",
+    "size": [
+      900,
+      900
+    ],
+    "samples": 20,
+    "denoise": true
+  },
+  "source_geometry_audit": [
+    {
+      "asset_id": "patient-chair",
+      "mesh_count": 23,
+      "triangles": 6900,
+      "min_y_gltf": 0.0,
+      "bounds_gltf": [
+        -1.084999918937683,
+        0.0,
+        -0.8849999904632568,
+        1.084999918937683,
+        2.4800000190734863,
+        1.399999976158142
+      ],
+      "non_manifold_edges": 0,
+      "contact_metadata": {
+        "seat_width": 1.65,
+        "seat_depth": 1.7,
+        "seat_top": 0.82,
+        "back_top": 2.48,
+        "armrest_top": 1.3,
+        "footrest_top": 0.22,
+        "floor": 0
+      }
+    },
+    {
+      "asset_id": "storage-cabinet",
+      "mesh_count": 6,
+      "triangles": 3544,
+      "min_y_gltf": 0.0,
+      "bounds_gltf": [
+        -0.699999988079071,
+        0.0,
+        -0.32499998807907104,
+        0.699999988079071,
+        1.399999976158142,
+        0.32499998807907104
+      ],
+      "non_manifold_edges": 0,
+      "contact_metadata": {
+        "width": 1.4,
+        "depth": 0.65,
+        "top": 1.4,
+        "floor": 0,
+        "doors": "closed"
+      }
+    },
+    {
+      "asset_id": "monitor",
+      "mesh_count": 5,
+      "triangles": 1500,
+      "min_y_gltf": 0.0,
+      "bounds_gltf": [
+        -0.5249999761581421,
+        0.0,
+        -0.22499999403953552,
+        0.5249999761581421,
+        0.9000000357627869,
+        0.22499999403953552
+      ],
+      "non_manifold_edges": 0,
+      "contact_metadata": {
+        "screen_width": 1.05,
+        "screen_height": 0.73,
+        "screen_body_depth": 0.15,
+        "overall_height": 0.9,
+        "stand_support_top": 0,
+        "screen": "neutral inactive; no numeric readings"
+      }
+    },
+    {
+      "asset_id": "diagnostic-holder",
+      "mesh_count": 10,
+      "triangles": 6280,
+      "min_y_gltf": 0.0,
+      "bounds_gltf": [
+        -0.2800000011920929,
+        0.0,
+        -0.3449999988079071,
+        0.2800000011920929,
+        1.0199999809265137,
+        0.3449999988079071
+      ],
+      "non_manifold_edges": 0,
+      "contact_metadata": {
+        "width": 0.56,
+        "height": 1.02,
+        "depth": 0.69,
+        "bottom_support_top": 0.079,
+        "floor": 0,
+        "front_axis": "+Z",
+        "hooks": {
+          "otoscope": [
+            -0.14,
+            0.46,
+            0.015
+          ],
+          "light": [
+            0.14,
+            0.46,
+            0.015
+          ]
+        }
+      }
+    },
+    {
+      "asset_id": "instrument-workbench",
+      "mesh_count": 23,
+      "triangles": 10008,
+      "min_y_gltf": 0.0,
+      "bounds_gltf": [
+        -1.4500000476837158,
+        0.0,
+        -1.850000023841858,
+        1.4500000476837158,
+        0.9750000238418579,
+        1.850000023841858
+      ],
+      "non_manifold_edges": 0,
+      "contact_metadata": {
+        "width": 2.9,
+        "depth": 3.7,
+        "height": 0.975,
+        "countertop_top": 0.975,
+        "floor": 0,
+        "contact_plane_extent": [
+          -1.38,
+          1.38,
+          -1.77,
+          1.77
+        ],
+        "tray": "flush steel insert; no raised rim over instrument contact positions"
+      }
+    },
+    {
+      "asset_id": "sink-workcounter",
+      "mesh_count": 19,
+      "triangles": 12484,
+      "min_y_gltf": 0.0,
+      "bounds_gltf": [
+        -2.325000047683716,
+        0.0,
+        -1.3250000476837158,
+        2.325000047683716,
+        1.9102587699890137,
+        1.3250000476837158
+      ],
+      "non_manifold_edges": 0,
+      "contact_metadata": {
+        "width": 4.65,
+        "depth": 2.65,
+        "countertop_top": 1.415,
+        "floor": 0,
+        "sink_center": [
+          -1.2,
+          1.415,
+          -0.7
+        ],
+        "front_tool_z_range": [
+          0.55,
+          0.7
+        ],
+        "upright_tool_positions_xz": [
+          [
+            0.3,
+            -0.65
+          ],
+          [
+            1.45,
+            -0.65
+          ]
+        ],
+        "front_support_top": 1.415
+      }
+    }
+  ],
+  "loader": "Three.js 186",
+  "total_glb_bytes": 1026508,
+  "total_material_draw_calls": 26,
+  "contact_verification": "Actual exported GLBs tested by downward surface raycast, not metadata alone",
+  "files": {
+    "diagnostic-holder.glb": {
+      "bytes": 160108,
+      "sha256": "a9649ba90398b61e1a148e680fd740d644e777d29ecc8eb91ea3d9bec8107218"
+    },
+    "instrument-workbench.glb": {
+      "bytes": 244208,
+      "sha256": "9b08f3fcfe41b32d508323e09accefa496321c1f168cab3a990fdcf8b330052d"
+    },
+    "monitor.glb": {
+      "bytes": 43392,
+      "sha256": "7fccde0f55495157bd45f109409199cd394bd531431fe865c0ac25be069b67e1"
+    },
+    "patient-chair.glb": {
+      "bytes": 181240,
+      "sha256": "35c1f488de6d254293267643c9838f5374b0bc6e1df6b6bf5243c10db39bd863"
+    },
+    "sink-workcounter.glb": {
+      "bytes": 303416,
+      "sha256": "5315f9557bfb3e6b2fe637819b3864d616ccd86f1786dbd0c7eb5bf66f9a0fb3"
+    },
+    "storage-cabinet.glb": {
+      "bytes": 94144,
+      "sha256": "43bd5eaf5034da0a19b4e340baa1aff506277e06f4e2c0fa42b96083500bcede"
+    },
+    "render.png": {
+      "bytes": 846527,
+      "sha256": "1106600f24001decaa3af9972b8658bd73b89cdb325167b7ab2618debae10f6f"
+    }
+  },
+  "geometry_license": "CC0-1.0",
+  "scripts_license": "MIT",
+  "root_convention": "glTF Y-up/+Z-forward; zero bottom; chair XZ zero at seat center",
+  "blend_location": "artifacts/blender-mcp/room-furniture/room-furniture.blend (Gitignored)",
+  "runtime_location": "User AppData/Local outside repository; not bundled",
+  "character_and_app_changes": "None in this furniture task"
+}

@@ -1,0 +1,20 @@
+--- a/public/app.js
++++ b/public/app.js
+@@ -76,1 +76,1 @@
+-loadConfig().then(()=>reconcileVoice());
++loadConfig().then(()=>reconcileVoice(voiceUnlocked));
+@@ -109,1 +109,1 @@
+-    try{const ended=new Promise(resolve=>{audio.onended=resolve;audio.onerror=resolve;audio._finish=resolve;});await audio.play();await ended;}finally{audio.removeEventListener('playing',onPlaying);audio._finish=null;}
++    try{const ended=new Promise(resolve=>{audio.onended=resolve;audio.onerror=resolve;audio._finish=resolve;});await audio.play();await ended;}finally{audio.removeEventListener('playing',onPlaying);audio._finish=null;if(voiceWanted&&!voiceBlocked())voiceSession?.resume();}
+@@ -113,1 +113,1 @@
+-function stopAudio(){speechEpoch++;speechRequest?.abort();speechRequest=null;speechKind=null;audio.pause();audio._finish?.();audio._finish=null;speechLevel=0;}
++function stopAudio(){speechEpoch++;speechRequest?.abort();speechRequest=null;speechKind=null;audio.pause();audio._finish?.();audio._finish=null;speechLevel=0;if(voiceWanted&&!voiceBlocked())voiceSession?.resume();}
+@@ -128,1 +128,1 @@
+-  stopAudio();voiceSession?.suspend();setState('listen','생각하는 중');status('궁금한 걸 알아보고 있어요');voiceDialogue?.clearReply();voiceDialogue?.showQuestion(message);voiceDialogue?.setState('processing');addMessage('user',message);
++  stopAudio();setState('listen','생각하는 중');status('궁금한 걸 알아보고 있어요');voiceDialogue?.clearReply();voiceDialogue?.showQuestion(message);voiceDialogue?.setState('processing');addMessage('user',message);
+@@ -166,1 +166,1 @@
+-  if(!sessionOn&&!sessionStarting)beginSession();
++  if(!sessionOn&&!sessionStarting)beginSession();else if(sessionOn&&audio.paused&&!busy)voiceSession?.resume();
+@@ -173,1 +173,1 @@
+-  try{const result=await getJSON(`/api/transcribe?audience=${audience}&guardianConfirmed=${guardianConfirmed}`,{method:'POST',signal:inputSignal,headers:{'Content-Type':blob.type.split(';')[0]||'audio/webm'},body:blob});if(id!==turnId||inputEpoch!==listeningEpoch||!voiceWanted||voiceBlocked()||capture.isCurrent&&!capture.isCurrent())return;transcriptionRequest=null;busy=false;if(result.status==='rejected'||!result.text||isLegacyPromptEcho(result.text)){voiceDialogue?.clearReply();voiceDialogue?.setState('listening',result.status==='rejected'||result.text?'다시 짧게 말해 줄래?':'듣고 있어!');return;}await ask(result.text,'voice');}
++  try{const result=await getJSON(`/api/transcribe?audience=${audience}&guardianConfirmed=${guardianConfirmed}`,{method:'POST',signal:inputSignal,headers:{'Content-Type':blob.type.split(';')[0]||'audio/webm'},body:blob});if(id!==turnId||inputEpoch!==listeningEpoch||!voiceWanted||voiceBlocked()||capture.isCurrent&&!capture.isCurrent())return;transcriptionRequest=null;busy=false;if(result.status==='rejected'||!result.text||isLegacyPromptEcho(result.text)){voiceDialogue?.clearReply();voiceDialogue?.setState('listening',result.status==='rejected'||result.text?'다시 짧게 말해 줄래?':'듣고 있어!');return;}voiceSession?.releaseInput();await ask(result.text,'voice');}

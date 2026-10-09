@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "date": "2026-10-09",
+  "status": "PNG 캐릭터 초안 생성 완료. GLB는 fal 계정 크레딧 차단으로 생성하지 않음. 실제 아동 선호·진료실 합성 사용성은 미검증.",
+  "generator": "built-in image_gen",
+  "identity": {
+    "id": "otter-patient",
+    "anchor": "살구색 어린 의인화 수달, 크림 주둥이, 작은 둥근 귀, 짙은 갈색 눈, 부드러운 웃음, 민트 멜빵바지와 크림 티, 옆으로 나온 가늘어지는 수달 꼬리. 이어지는 유기적 몸 윤곽과 자연스러운 옷 실루엣, 부드러운 storybook 3D 재질.",
+    "avoid": "개별 구/타원 조립·primitive 관절·과장된 거대 눈·캐릭터가 들어간 전체 장면 이미지는 만들지 않음."
+  },
+  "assets": [
+    {
+      "role": "patient-room-cutout",
+      "path": "/assets/clinic/patient-otter-v1.png",
+      "file": "public/assets/clinic/patient-otter-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent": true,
+      "preferred": true,
+      "prompt": "Use case: stylized-concept. Asset: one separate transparent full-body child-friendly patient character cutout for a 3D storybook clinic game, no environment. A warm apricot-colored young anthropomorphic otter with a gently continuous organic body silhouette, cream muzzle and chest, small rounded ears, expressive modest dark brown eyes (not huge baby eyes), friendly soft smile, mint-green soft fabric overalls over a cream short sleeve T-shirt, small bare otter paws and feet, smooth tapering otter tail visible behind one side. Standing upright, front view, arms a little separated from the body in a relaxed open pose, entire head/body/feet/tail visible with generous transparent margins. Lovely refined soft storybook 3D illustration, sculpted connected body and naturally tailored clothing contours, matte velvety materials, subtle soft studio lighting. Suitable for ages 4-7, warm and calm, appealing without exaggerated eyes. Do not build the character from stacked separate spheres or ellipses, no joints resembling primitive balls, no rigid toy assembly, no logos, text, props, scenery, pedestal or floor shadow. Exactly one character, true transparent background."
+    },
+    {
+      "role": "persistent-upper-left-dialogue-portrait",
+      "identity": "otter-patient",
+      "path": "/assets/clinic/patient-otter-portrait-v1.png",
+      "file": "public/assets/clinic/patient-otter-portrait-v1.png",
+      "width": 1330,
+      "height": 1182,
+      "transparent": true,
+      "reference": "patient-otter-v1.png",
+      "prompt": "Use case: identity-preserve. Reference image is the exact otter patient identity and material style. Create ONE separate transparent portrait cutout of this SAME warm apricot young anthropomorphic otter, identical face, small rounded ears, cream muzzle, soft dark-brown eye shape and proportion, smile, fur color, mint overalls and cream T-shirt. Head and upper shoulders/chest only, directly facing viewer, friendly calm expression for persistent upper-left dialogue portrait. Keep entire ears and generous margin. Same refined soft storybook 3D rendering and naturally connected sculpted shapes. Fully remove all scenery, gradient backgrounds, drop shadows and backdrop: true transparent alpha around the character. No text, frame, props or extra characters. Do not redesign the face or exaggerate the eyes."
+    },
+    {
+      "role": "doctor-room-cutout",
+      "path": "/assets/clinic/doctor-human-v1.png",
+      "file": "public/assets/clinic/doctor-human-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent": true,
+      "identity": "doctor-human",
+      "anchor": "성별 중립적으로 표현한 친근한 사람 의사. 따뜻한 피부, 짧은 짙은 갈색 머리, 흰 가운, 세이지 민트 셔츠, 따뜻한 회색 바지, 크림 신발. 환자와 같은 부드러운 storybook 3D 재질.",
+      "styleReference": "patient-otter-v1.png",
+      "prompt": "Use case: stylized-concept. Reference image only defines the soft sculpted storybook 3D material and lighting style; create a DIFFERENT HUMAN character. ONE full-body friendly adult human doctor for a child clinic game ages 4-7, gender-neutral presentation, warm medium skin, short softly waved dark brown hair, calm modest brown eyes and welcoming smile, natural softly sculpted human face (not an animal). Simple white doctor's coat with flowing tailored outline over sage-mint shirt and warm gray trousers, cream comfortable shoes, no equipment, no labels. Front-facing standing relaxed with hands slightly apart from torso, all feet/head/hands visible and generous margin. Refined connected organic body proportions and soft clothing contours, matte fabric, gentle studio lighting matching the otter. Not built from stacked spheres/ellipses, no primitive ball joints or exposed toy seams. Exact transparent cutout with no backdrop, floor, gradient, halo or shadow, no text or other characters."
+    },
+    {
+      "role": "alternate-patient-cutout",
+      "path": "/assets/clinic/patient-otter-v2.png",
+      "file": "public/assets/clinic/patient-otter-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "transparent": true,
+      "preferred": false,
+      "reference": "patient-otter-v1.png",
+      "prompt": "Use case: background-extraction. Edit the supplied full-body otter image only to remove the ENTIRE colored gradient background and diffuse surrounding halo. Preserve the otter's exact identity, complete head, paws, feet, tail, pose, mint overalls, cream shirt, fur colors, body contours and shading. True transparent cutout: all pixels outside the actual otter silhouette must have zero alpha; do not keep the old gradient or any floor shadow. No new scenery, no changes to character, no cropping. Retain gentle feathered fur edges, keep complete full body."
+    }
+  ],
+  "integration": {
+    "room": "PNG plane은 임시 표현이다. 이미지 원본 알파를 보존하고 올바른 투명 blending/depth 설정으로 합성한다. 전신 비율을 유지한다. 아직 실제 GLB mesh가 아님.",
+    "dialogue": "좌상단 portrait는 room 수달과 같은 identity를 사용한다. 원형/사각 프레임은 UI에서만 처리하고 파일을 바꾸지 않는다.",
+    "sourceOwnership": "자산과 이 매핑만 제공. app.js/tool-selector.js 등 소스 수정하지 않음."
+  },
+  "validation": {
+    "alpha": "Pillow로 RGBA·알파 범위·0 alpha 배경 픽셀 존재를 읽기 전용 확인. 픽셀 편집·리사이즈·crop 하지 않음.",
+    "visual": "생성 이미지 직접 확인. 몸·옷이 이어지는 실루엣, 같은 환자 얼굴의 전신과 portrait, 분리된 사람 의사 cutout.",
+    "notVerified": "아동 선호, 진료실 배치, WebGL 성능, 실제 3D mesh/rig/GLB"
+  },
+  "glb": {
+    "status": "blocked",
+    "file": null,
+    "reason": "fal connected account balance_exhausted",
+    "paidJobsSubmitted": 0,
+    "modelsDiscovered": [
+      "fal-ai/hunyuan-3d/v3.1/pro/image-to-3d",
+      "fal-ai/trellis-2",
+      "tripo3d/h3.1/image-to-3d",
+      "meshy/v7.1/image-to-3d"
+    ],
+    "next": "사용자가 동일 fal 계정의 크레딧 차단을 해결한 후 readiness 확인. 실제 schema·가격·GLB 지원 확인 뒤 전신 원본으로 image-to-3D 생성; 비어있지 않은 렌더와 원본 identity 검수. 차단 중 재시도·계정 전환·GLB 임의 제작은 하지 않음."
+  }
+}

@@ -1,0 +1,24 @@
+--- a/public/app.js
++++ b/public/app.js
+@@
+ import {VoiceSession} from './voice-session.js';
++import {isLegacyPromptEcho} from './transcript-policy.js';
+@@
+-async function handleUtterance(blob){
++async function handleUtterance(blob, capture={}){
++  if(capture.truncated){voiceDialogue?.clearReply();voiceDialogue?.setState('listening','짧게 나눠서 다시 말해 줘');return;}
+   if(!voiceWanted||voiceBlocked())return;const id=++turnId,inputEpoch=listeningEpoch,controller=new AbortController();transcriptionRequest=controller;busy=true;voiceDialogue?.setState('processing');
+-  try{const result=await getJSON(`/api/transcribe?audience=${audience}&guardianConfirmed=${guardianConfirmed}`,{method:'POST',signal:controller.signal,headers:{'Content-Type':blob.type.split(';')[0]||'audio/webm'},body:blob});if(id!==turnId||inputEpoch!==listeningEpoch||!voiceWanted||voiceBlocked())return;transcriptionRequest=null;busy=false;if(result.text)await ask(result.text,'voice');}
++  const inputSignal=capture.signal?AbortSignal.any([controller.signal,capture.signal]):controller.signal;
++  try{const result=await getJSON(`/api/transcribe?audience=${audience}&guardianConfirmed=${guardianConfirmed}`,{method:'POST',signal:inputSignal,headers:{'Content-Type':blob.type.split(';')[0]||'audio/webm'},body:blob});if(id!==turnId||inputEpoch!==listeningEpoch||!voiceWanted||voiceBlocked()||capture.isCurrent&&!capture.isCurrent())return;transcriptionRequest=null;busy=false;if(result.status==='rejected'||!result.text||isLegacyPromptEcho(result.text)){voiceDialogue?.clearReply();voiceDialogue?.setState('listening',result.status==='rejected'||result.text?'다시 짧게 말해 줄래?':'듣고 있어!');return;}await ask(result.text,'voice');}
+   catch(error){if(id===turnId&&inputEpoch===listeningEpoch&&!controller.signal.aborted){voiceDialogue?.setState('unavailable','잠깐 연결을 확인할게');$('system-notice').textContent=error.message;}}
+   finally{if(transcriptionRequest===controller)transcriptionRequest=null;if(id===turnId&&inputEpoch===listeningEpoch)busy=false;}
+ }
+
+# This is a reviewable integration proposal, not auto-applied. Match current
+# root source before applying. Also use !inputSignal.aborted in the catch guard.
+# After ASR acceptance, ask()/speak() intentionally do not use inputSignal:
+# microphone off must preserve the accepted question's answer/playback.
+# Screen/context transitions must invalidate flowEpoch and turnId, abort ASR,
+# call stopAudio(), and clearReply(). Ordinary narration suspend/resume does
+# not cancel the active answer. Keep onUtterance awaited through audio ended.

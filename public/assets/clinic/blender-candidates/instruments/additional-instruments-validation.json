@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-09",
+  "loader": "Three.js 186",
+  "mcpPort": 9880,
+  "localMcpInitializeVerified": true,
+  "externalGenerationCalls": 0,
+  "renderPerformed": false,
+  "licenseGeometry": "CC0-1.0",
+  "licenseSource": "MIT",
+  "results": [
+    {
+      "tool_id": "syringe",
+      "file": "syringe.glb",
+      "bytes": 162960,
+      "sha256": "97277b305fbd3f31845849201318879f6d513016802868ec4610759cc96abc06",
+      "meshCount": 21,
+      "triangles": 7972,
+      "boundsMeters": [
+        -0.026999998837709427,
+        -0.10300000011920929,
+        -0.019999999552965164,
+        0.026999998837709427,
+        0.12200000137090683,
+        0.019999999552965164
+      ],
+      "sizeMeters": [
+        0.053999997675418854,
+        0.22500000149011612,
+        0.03999999910593033
+      ],
+      "gripPointGltf": [
+        0,
+        0,
+        0
+      ],
+      "contactPointGltf": [
+        0,
+        0.122,
+        0
+      ],
+      "longAxisGltf": [
+        0,
+        1,
+        0
+      ],
+      "frontAxisGltf": [
+        0,
+        0,
+        1
+      ],
+      "springPresent": false
+    },
+    {
+      "tool_id": "spatula",
+      "file": "spatula.glb",
+      "bytes": 48864,
+      "sha256": "ea8f180844b7de307f2f0e0d85ab4508310eb7d828bd16cc60e271216dcbea7d",
+      "meshCount": 4,
+      "triangles": 2176,
+      "boundsMeters": [
+        -0.012000000104308128,
+        -0.03999999910593033,
+        -0.0017500000540167093,
+        0.012000000104308128,
+        0.10999999940395355,
+        0.001810000012483215
+      ],
+      "sizeMeters": [
+        0.024000000208616257,
+        0.14999999850988388,
+        0.0035600000664999243
+      ],
+      "gripPointGltf": [
+        0,
+        0,
+        0
+      ],
+      "contactPointGltf": [
+        0,
+        0.11,
+        0
+      ],
+      "longAxisGltf": [
+        0,
+        1,
+        0
+      ],
+      "frontAxisGltf": [
+        0,
+        0,
+        1
+      ],
+      "springPresent": null
+    }
+  ],
+  "manufacturedPartCount": 25,
+  "allPartsConnectedAndClosed": true
+}

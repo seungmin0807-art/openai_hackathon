@@ -1,0 +1,184 @@
+{
+  "initialize": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "MCP for Blender",
+      "title": null,
+      "version": "1.30.0",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": "MCP for Blender drives the user's live Blender. execute_blender_code runs Python there\nwith the full bpy API, so anything Blender can do, you can do; look shows you the result.\n\nStart with get_addon_status (Blender version, which libraries and generators are on) and\nget_scene_info.\n\nScripts run in someone else's Blender:\n- Look shader nodes up by type, never by name (names are localized):\n  `next(n for n in mat.node_tree.nodes if n.type == \"BSDF_PRINCIPLED\")`.\n- Never hardcode enum identifiers; read them, e.g.\n  `[i.identifier for i in bpy.types.RenderSettings.bl_rna.properties[\"file_format\"].enum_items]`.\n  scene.render.engine under-reports: read the current value, and assign a new one inside\n  try/except TypeError, whose message lists the valid engines.\n- Material colors go on shader node inputs; material.diffuse_color only affects the viewport.\n\nlook is how you see your work; use it as much as you need. Images stay in the conversation, so\na smaller max_size keeps long sessions cheap.\n\nObjects can also come from existing libraries (search_assets, then import_asset: Poly Haven,\nSketchfab, Poly Pizza) or be made to order (generate_3d: one new textured model from text or an\nimage, 1-3 minutes, may cost the user a credit). A generation is one object, never a whole\nscene, the ground or parts to assemble. Imported and generated models arrive at arbitrary\nscale: use the reported world_bounding_box to size them and put them on the ground."
+  },
+  "tools": [
+    "get_addon_status",
+    "disable_telemetry",
+    "get_scene_info",
+    "execute_blender_code",
+    "record_trajectory_feedback",
+    "look",
+    "generate_3d",
+    "search_assets",
+    "import_asset"
+  ],
+  "host": "127.0.0.1",
+  "port": 9877,
+  "safeMode": true,
+  "telemetry": false,
+  "calls": [
+    {
+      "tool": "execute_blender_code",
+      "result": "trolley_modelled_exported_ready_to_render"
+    },
+    {
+      "tool": "execute_blender_code",
+      "result": "trolley_cycles_rendered"
+    }
+  ],
+  "actualRender": {
+    "status": "trolley_cycles_rendered",
+    "render": "C:/dev/openai_hackathon/artifacts/blender-mcp/trolley/render.png",
+    "resolution": [
+      900,
+      1000
+    ],
+    "samples": 20,
+    "tray_support_contact": [
+      {
+        "object": "Tray | main support pad",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | main support pad.001",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | main support pad.002",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | main support pad.003",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | small support pad",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | small support pad.001",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | small support pad.002",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      },
+      {
+        "object": "Tray | small support pad.003",
+        "base_z_m": 0.788,
+        "top_z_m": 0.793
+      }
+    ],
+    "audit": {
+      "status": "trolley_modelled_exported_ready_to_render",
+      "objects": 103,
+      "triangles": 64236,
+      "bounds_blender_m": [
+        -0.36230000853538513,
+        -0.26630812883377075,
+        0,
+        0.36230000853538513,
+        0.23800000548362732,
+        0.8652999997138977
+      ],
+      "watertight_surface_audit": [
+        {
+          "object": "Shelf | lower connected enamel pan",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 1056,
+          "faces": 1030
+        },
+        {
+          "object": "Shelf | middle connected enamel pan",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 1056,
+          "faces": 1030
+        },
+        {
+          "object": "Tray | main brushed steel",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 936,
+          "faces": 902
+        },
+        {
+          "object": "Tray | small brushed steel",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 936,
+          "faces": 902
+        },
+        {
+          "object": "Caster front left | continuous moulded tire",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 448,
+          "faces": 448
+        },
+        {
+          "object": "Caster front right | continuous moulded tire",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 448,
+          "faces": 448
+        },
+        {
+          "object": "Caster rear left | continuous moulded tire",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 448,
+          "faces": 448
+        },
+        {
+          "object": "Caster rear right | continuous moulded tire",
+          "connected_components": 1,
+          "non_manifold_edges": 0,
+          "vertices": 448,
+          "faces": 448
+        }
+      ],
+      "caster_ground_contact_z_m": 0,
+      "blend": "C:/dev/openai_hackathon/artifacts/blender-mcp/trolley/trolley.blend",
+      "glb": "C:/dev/openai_hackathon/public/assets/clinic/blender-candidates/trolley/trolley.glb",
+      "asset_license": "CC0-1.0",
+      "source_license": "MIT"
+    }
+  },
+  "sourceBlend": "artifacts/blender-mcp/trolley/trolley.blend",
+  "chatCallableToolLoaded": false
+}

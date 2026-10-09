@@ -1,0 +1,10 @@
+{
+  "units": "metres",
+  "gltf": {"up": "+Y", "front": "+Z", "baseHeight": 0, "width": 0.7246, "height": 0.8653, "depth": 0.50431},
+  "topWorkSurfaceHeight": 0.788,
+  "mainTray": {"centerXZ": [-0.09, -0.009], "innerFloorHeight": 0.7968, "outerWidth": 0.384, "outerDepth": 0.274, "rimHeight": 0.82},
+  "smallTray": {"centerXZ": [0.234, -0.004], "innerFloorHeight": 0.7968, "outerWidth": 0.122, "outerDepth": 0.192, "rimHeight": 0.82},
+  "shelves": [{"name": "lower", "matTopHeight": 0.2229}, {"name": "middle", "matTopHeight": 0.4409}],
+  "toolsIncluded": false,
+  "note": "Placement reference from the original modelling dimensions; leave clearance inside the rounded tray rim. Static equipment candidate; no drawer or caster animation."
+}

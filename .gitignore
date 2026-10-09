@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+node_modules/
+voice/.venv/
+voice/models/
+voice/dml-runtime/
+voice/__pycache__/
+*.log
+artifacts/
+.data/
+.vercel/
+deployment/**/.vercel/
+deployment/**/models/
+
+.vercel
+.env*

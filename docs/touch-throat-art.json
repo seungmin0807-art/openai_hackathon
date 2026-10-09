@@ -1,0 +1,137 @@
+{
+  "asset": "/assets/touch/throat-side.png",
+  "absolutePath": "C:/dev/openai_hackathon/public/assets/touch/throat-side.png",
+  "generatedBy": "Built-in ImageGen",
+  "sourcePath": "C:/Users/uudra/.codex/generated_images/01a11e43-da26-7302-94ce-f3f9782ef9d7/exec-51481256-f752-466a-b532-ec68256f96c3.png",
+  "prompt": "Use case: scientific-educational.\nAsset type: transparent PNG base layer for a Korean children's hospital touch-and-observe game.\nPrimary request: A VERY SIMPLE, friendly, flat 2D cutaway diagram of the inside of the mouth and throat viewed FROM THE SIDE. This is a simplified teaching diagram, not a face or character. The front of the mouth is on the LEFT and the back of the throat is on the RIGHT.\nSubject and anatomy: Show just a clear open oral passage above a broad smooth peach-pink tongue, a simple curved cream-and-peach palate above, and the passage bending downward into the pharynx at the right. Show ONE small rounded peach almond representing the near-side palatine tonsil on the lateral wall just behind the mouth/tongue and below the soft palate. Farther RIGHT and behind it, show the distinct posterior pharyngeal wall as one broad smooth curved vertical band. The tonsil and posterior wall must be separate, easily distinguishable places that can be illuminated by a movable circular flashlight. Do NOT depict two symmetrical tonsils in this side view. Include only the minimal opening contours needed to understand this side-cutaway.\nStyle: thick, impeccably clean rounded outlines in muted plum; broad smooth pastel color shapes, cream, pale peach, muted lavender airway and soft mint outer boundary. A cute simple textbook/game diagram. Uniform flat color, no glossy 3D shading, no texture. Comfortable rather than clinical.\nComposition: one complete isolated shape, landscape 4:3, center the simple cutaway within 75% of canvas, with generous genuinely TRANSPARENT empty margin on all sides, no edge cropping. Leave the passage and the surroundings roomy enough for a separately rendered flashlight and round light effect. Anatomical base ONLY: no tools, no light effects drawn into image.\nConstraints: GENUINE ALPHA TRANSPARENCY, not white/checkerboard background. No face silhouette, eyes, nose, people, characters, labels, text, letters, arrows, numbers, markers or target dots. No cells, blood vessels, nerves, realistic tissue, wrinkles, wet texture, blood, gore, wounds, disease, scary red throat. No extra anatomical layers, bones, detailed teeth rows, decorative elements. Do not create UI or infographic panels.",
+  "visualReview": {
+    "passed": true,
+    "style": "Simple pastel side cutaway with one tonsil and a separate posterior pharyngeal wall; no characters, text, vessels or realistic tissue.",
+    "anatomy": "Front at left, posterior pharyngeal passage at right. One near-side tonsil is shown schematically; observation two is the posterior wall, never a second tonsil.",
+    "limitation": "Simplified educational illustration, not an exact sagittal anatomical section or a clinical interpretation."
+  },
+  "native": {
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "alphaThreshold": 16,
+    "alphaBounds": {
+      "x": 307,
+      "y": 184,
+      "width": 869,
+      "height": 698
+    },
+    "fullyTransparentPixels": 1123701,
+    "fullyTransparentFraction": 0.7145825066389915,
+    "visibleFractionAbove16": 0.28122742488528024,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "fakeOpaqueBackground": false,
+    "visiblePixelsTouchNativeEdges": false
+  },
+  "mapping": {
+    "worldWidth": 1000,
+    "worldHeight": 650,
+    "bodySlot": {
+      "x": 420,
+      "y": 290,
+      "width": 650,
+      "height": 480
+    },
+    "fit": "contain",
+    "coordinateConvention": "Center x/y in world coordinates, no rotation; preserve original PNG without cropping.",
+    "scale": 0.4419889502762431,
+    "drawOrigin": {
+      "x": 100,
+      "y": 50
+    }
+  },
+  "observations": [
+    {
+      "id": "tonsil",
+      "name": "편도",
+      "x": 535.801,
+      "y": 282.486,
+      "r": 15,
+      "nativeAnchor": {
+        "x": 986,
+        "y": 526,
+        "rgba": [
+          251,
+          168,
+          157,
+          254
+        ]
+      },
+      "anatomicalPart": "Single depicted near-side palatine tonsil",
+      "explanation": "편도 부위의 모습을 살펴보는 자리",
+      "sourcePixels": {
+        "x": 986,
+        "y": 526,
+        "r": 34
+      },
+      "alphaFitWorld": {
+        "x": 588.138,
+        "y": 285.186,
+        "r": 23.381
+      }
+    },
+    {
+      "id": "posterior-wall",
+      "name": "목 뒤 벽",
+      "x": 577.348,
+      "y": 301.934,
+      "r": 13,
+      "nativeAnchor": {
+        "x": 1080,
+        "y": 570,
+        "rgba": [
+          220,
+          151,
+          167,
+          254
+        ]
+      },
+      "anatomicalPart": "Posterior pharyngeal wall behind the oral passage",
+      "explanation": "편도 뒤쪽의 목 벽을 살펴보는 별개의 자리",
+      "sourcePixels": {
+        "x": 1080,
+        "y": 570,
+        "r": 30
+      },
+      "alphaFitWorld": {
+        "x": 652.779,
+        "y": 315.444,
+        "r": 20.63
+      }
+    }
+  ],
+  "visibleWorldBounds": {
+    "left": 235.691,
+    "top": 131.326,
+    "right": 619.779,
+    "bottom": 439.834
+  },
+  "fitsWorldWithoutClipping": true,
+  "assetEditedAfterGeneration": false,
+  "alphaFitMapping": {
+    "strategy": "Fit alpha>16 visible bounds into the body slot at render time; preserve original PNG file.",
+    "sourceBounds": {
+      "x": 307,
+      "y": 184,
+      "width": 869,
+      "height": 698
+    },
+    "scale": 0.6876790830945558,
+    "visibleDrawOrigin": {
+      "x": 121.2034383954155,
+      "y": 50.00000000000003
+    },
+    "coordinateFields": "Use observations[].sourcePixels for arbitrary future image scaling; alphaFitWorld is the computed current-slot alternative, while top-level x/y remain original full-PNG contain mapping."
+  },
+  "integrationStatus": "Saved as a future replacement candidate; not connected to the current SVG rough game."
+}

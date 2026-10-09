@@ -1,0 +1,18 @@
+{
+  "name": "clinic-play",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test server.test.mjs game-engine.test.mjs touch-engine.test.mjs tool-challenges.test.mjs visit-plans.test.mjs visit-state.test.mjs narration-timing.test.mjs ear-completion.test.mjs",
+    "build:vendor": "esbuild vendor/three-entry.js --bundle --format=esm --minify --outfile=public/vendor/three.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.1",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

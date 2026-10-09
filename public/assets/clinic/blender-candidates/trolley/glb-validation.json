@@ -1,0 +1,557 @@
+{
+  "loader": "Three.js 186",
+  "bytes": 2049844,
+  "meshCount": 103,
+  "triangles": 64236,
+  "sizeMeters": [
+    0.7245999941522675,
+    0.8652999870430935,
+    0.5043081343173981
+  ],
+  "boundsMeters": [
+    -0.36229999707613375,
+    0,
+    -0.23800000548362732,
+    0.36229999707613375,
+    0.8652999870430935,
+    0.26630812883377075
+  ],
+  "wheels": [
+    {
+      "name": "Caster_front_left_|_continuous_moulded_tire001",
+      "minimumHeightMeters": 0
+    },
+    {
+      "name": "Caster_front_right_|_continuous_moulded_tire001",
+      "minimumHeightMeters": 0
+    },
+    {
+      "name": "Caster_rear_left_|_continuous_moulded_tire001",
+      "minimumHeightMeters": 0
+    },
+    {
+      "name": "Caster_rear_right_|_continuous_moulded_tire001",
+      "minimumHeightMeters": 0
+    }
+  ],
+  "selfContained": true,
+  "frontAxis": "+Z",
+  "animations": [],
+  "meshes": [
+    {
+      "name": "Caster_front_left_|_axle_bearing002",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_front_left_|_axle_bearing003",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_front_left_|_brake_lever001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_front_left_|_continuous_moulded_tire001",
+      "vertices": 448,
+      "triangles": 896
+    },
+    {
+      "name": "Caster_front_left_|_fork_bridge001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_front_left_|_fork_side002",
+      "vertices": 672,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_front_left_|_fork_side003",
+      "vertices": 674,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_front_left_|_hexagonal_axle_nut002",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_front_left_|_hexagonal_axle_nut003",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_front_left_|_steel_hub001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_front_left_|_swivel_collar001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_front_left_|_swivel_mount_plate001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_front_left_|_through_axle001",
+      "vertices": 390,
+      "triangles": 636
+    },
+    {
+      "name": "Caster_front_right_|_axle_bearing002",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_front_right_|_axle_bearing003",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_front_right_|_brake_lever001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_front_right_|_continuous_moulded_tire001",
+      "vertices": 448,
+      "triangles": 896
+    },
+    {
+      "name": "Caster_front_right_|_fork_bridge001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_front_right_|_fork_side002",
+      "vertices": 674,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_front_right_|_fork_side003",
+      "vertices": 672,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_front_right_|_hexagonal_axle_nut002",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_front_right_|_hexagonal_axle_nut003",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_front_right_|_steel_hub001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_front_right_|_swivel_collar001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_front_right_|_swivel_mount_plate001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_front_right_|_through_axle001",
+      "vertices": 390,
+      "triangles": 636
+    },
+    {
+      "name": "Caster_rear_left_|_axle_bearing002",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_rear_left_|_axle_bearing003",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_rear_left_|_continuous_moulded_tire001",
+      "vertices": 448,
+      "triangles": 896
+    },
+    {
+      "name": "Caster_rear_left_|_fork_bridge001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_rear_left_|_fork_side002",
+      "vertices": 676,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_rear_left_|_fork_side003",
+      "vertices": 654,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_rear_left_|_hexagonal_axle_nut002",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_rear_left_|_hexagonal_axle_nut003",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_rear_left_|_steel_hub001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_rear_left_|_swivel_collar001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_rear_left_|_swivel_mount_plate001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_rear_left_|_through_axle001",
+      "vertices": 390,
+      "triangles": 636
+    },
+    {
+      "name": "Caster_rear_right_|_axle_bearing002",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_rear_right_|_axle_bearing003",
+      "vertices": 486,
+      "triangles": 796
+    },
+    {
+      "name": "Caster_rear_right_|_continuous_moulded_tire001",
+      "vertices": 448,
+      "triangles": 896
+    },
+    {
+      "name": "Caster_rear_right_|_fork_bridge001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_rear_right_|_fork_side002",
+      "vertices": 654,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_rear_right_|_fork_side003",
+      "vertices": 676,
+      "triangles": 340
+    },
+    {
+      "name": "Caster_rear_right_|_hexagonal_axle_nut002",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_rear_right_|_hexagonal_axle_nut003",
+      "vertices": 294,
+      "triangles": 452
+    },
+    {
+      "name": "Caster_rear_right_|_steel_hub001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_rear_right_|_swivel_collar001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Caster_rear_right_|_swivel_mount_plate001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Caster_rear_right_|_through_axle001",
+      "vertices": 390,
+      "triangles": 636
+    },
+    {
+      "name": "Counter_|_rounded_enamel_top001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_case_|_bottom001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_case_|_rear001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_case_|_side002",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_case_|_side003",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_case_|_top001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_blank_paper_label001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_inner_floor001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_inner_rear001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_inner_side002",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_inner_side003",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_label_holder001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_mint_front001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_shadow_recess001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Drawer_|_steel_pull001",
+      "vertices": 947,
+      "triangles": 1700
+    },
+    {
+      "name": "Frame_|_caster_mount_screw004",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Frame_|_caster_mount_screw005",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Frame_|_caster_mount_screw006",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Frame_|_caster_mount_screw007",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Frame_|_lower_supporting_cross_rail002",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_lower_supporting_cross_rail003",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_middle_supporting_cross_rail002",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_middle_supporting_cross_rail003",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upper_cross_rail002",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upper_cross_rail003",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upper_side_rail002",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upper_side_rail003",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upright004",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upright005",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upright006",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Frame_|_upright007",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Handle_|_left_continuous_bent_tube001",
+      "vertices": 1311,
+      "triangles": 2372
+    },
+    {
+      "name": "Handle_|_left_end_ferrule002",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Handle_|_left_end_ferrule003",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Handle_|_left_forest_rubber_grip001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Handle_|_right_continuous_bent_tube001",
+      "vertices": 1311,
+      "triangles": 2372
+    },
+    {
+      "name": "Handle_|_right_end_ferrule002",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Handle_|_right_end_ferrule003",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Handle_|_right_forest_rubber_grip001",
+      "vertices": 582,
+      "triangles": 956
+    },
+    {
+      "name": "Shelf_|_lower_connected_enamel_pan001",
+      "vertices": 1056,
+      "triangles": 2108
+    },
+    {
+      "name": "Shelf_|_lower_silicone_mat001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Shelf_|_middle_connected_enamel_pan001",
+      "vertices": 1056,
+      "triangles": 2108
+    },
+    {
+      "name": "Shelf_|_middle_silicone_mat001",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_main_brushed_steel001",
+      "vertices": 936,
+      "triangles": 1868
+    },
+    {
+      "name": "Tray_|_main_support_pad004",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_main_support_pad005",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_main_support_pad006",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_main_support_pad007",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_small_brushed_steel001",
+      "vertices": 936,
+      "triangles": 1868
+    },
+    {
+      "name": "Tray_|_small_support_pad004",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_small_support_pad005",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_small_support_pad006",
+      "vertices": 600,
+      "triangles": 300
+    },
+    {
+      "name": "Tray_|_small_support_pad007",
+      "vertices": 600,
+      "triangles": 300
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-09",
+  "authorship": "Original local Blender Python modelling; no external generation or downloaded geometry",
+  "blender_version": "4.5.14 LTS",
+  "mcp_server": {
+    "name": "MCP for Blender",
+    "title": null,
+    "version": "1.30.0",
+    "websiteUrl": null,
+    "icons": null
+  },
+  "mcp_protocol": "2025-11-25",
+  "actual_calls": [
+    "initialize",
+    "tools/list",
+    "execute_blender_code"
+  ],
+  "available_tool_names": [
+    "get_addon_status",
+    "disable_telemetry",
+    "get_scene_info",
+    "execute_blender_code",
+    "record_trajectory_feedback",
+    "look",
+    "generate_3d",
+    "search_assets",
+    "import_asset"
+  ],
+  "render": {
+    "engine": "Cycles",
+    "size": [
+      900,
+      740
+    ],
+    "samples": 20,
+    "denoise": true
+  },
+  "topology_audit": [
+    {
+      "mesh": "Tray | continuous rolled steel shell",
+      "connected_components": 1,
+      "vertices": 2498,
+      "faces": 2496,
+      "non_manifold_edges": 0
+    },
+    {
+      "mesh": "Otoscope | connected ribbed grip",
+      "connected_components": 1,
+      "vertices": 3136,
+      "faces": 3074,
+      "non_manifold_edges": 0
+    },
+    {
+      "mesh": "Otoscope | hollow speculum",
+      "connected_components": 1,
+      "vertices": 640,
+      "faces": 640,
+      "non_manifold_edges": 0
+    },
+    {
+      "mesh": "Thermometer | continuous waist and probe",
+      "connected_components": 1,
+      "vertices": 2402,
+      "faces": 2400,
+      "non_manifold_edges": 0
+    },
+    {
+      "mesh": "Penlight | continuous ivory barrel",
+      "connected_components": 1,
+      "vertices": 384,
+      "faces": 322,
+      "non_manifold_edges": 0
+    },
+    {
+      "mesh": "Penlight | bent spring pocket clip",
+      "connected_components": 1,
+      "vertices": 240,
+      "faces": 244,
+      "non_manifold_edges": 0
+    }
+  ],
+  "contact_audit": [
+    {
+      "tool_id": "otoscope",
+      "initial_min_z": 0.019880883395671844,
+      "vertical_contact_adjustment": -0.0005808833956718433,
+      "final_min_z": 0.0193
+    },
+    {
+      "tool_id": "thermometer",
+      "initial_min_z": 0.019812798127532005,
+      "vertical_contact_adjustment": -0.0005127981275320041,
+      "final_min_z": 0.0193
+    },
+    {
+      "tool_id": "light",
+      "initial_min_z": 0.019499996677041054,
+      "vertical_contact_adjustment": -0.0001999966770410526,
+      "final_min_z": 0.0193
+    }
+  ],
+  "files": {
+    "instruments-tray.glb": {
+      "bytes": 695132,
+      "sha256": "f6e472c449c0e88eb84da1b4eb337121a097e4e51ebb9bdea47277c42407dad4"
+    },
+    "light.glb": {
+      "bytes": 179208,
+      "sha256": "d187c94be013aed47f18760fd9ccf7b320d10540688c0f97b9c5f023c628934b"
+    },
+    "otoscope.glb": {
+      "bytes": 222604,
+      "sha256": "e9a70241d8176fe47a5acbe5f2c5e3f490a3983f26c640b37b8abdc7cd0cc8c9"
+    },
+    "thermometer.glb": {
+      "bytes": 192432,
+      "sha256": "51dfffeecd05fc14774b46e7b7389477d35b300a0868eebfe96f84dc9129898f"
+    },
+    "render.png": {
+      "bytes": 760661,
+      "sha256": "91dfa92fbe870bf8dce76360d755ffe8f8331077a4c94c88933b44adbb77489d"
+    }
+  },
+  "geometry_license": "CC0-1.0",
+  "scripts_license": "MIT",
+  "runtime_location": "User AppData/Local; executable and dependencies are outside the Git project",
+  "blend_location": "artifacts/blender-mcp/instruments/instruments.blend (Gitignored)",
+  "limitations": "Game appearance candidates; clinical functions and app pickup integration are separate work"
+}

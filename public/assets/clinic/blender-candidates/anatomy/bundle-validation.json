@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-09",
+  "loader": "Three.js 186",
+  "caseCount": 1,
+  "totalGeometryBytes": 286044,
+  "totalPreviewBytes": 964626,
+  "originalCharacterHashesUnchanged": true,
+  "prohibitedDevelopmentFiles": [],
+  "externalGenerationCalls": 0,
+  "cases": [
+    {
+      "caseId": "ear",
+      "file": "ear.glb",
+      "bytes": 286044,
+      "sha256": "c06dc48a12b45ec64104ef277218c337dda50708a2852cdb268608da8ce89c6a",
+      "meshCount": 3,
+      "triangles": 13490,
+      "boundsLocal": [
+        -0.8182260096073151,
+        -0.19099999964237213,
+        -0.20008079335093498,
+        0.24586661159992218,
+        1.1327777951955795,
+        0.17757095769047737
+      ],
+      "targets": [
+        "canal",
+        "eardrum"
+      ],
+      "previews": [
+        {
+          "file": "ear.png",
+          "bytes": 964626,
+          "width": 1000,
+          "height": 1000,
+          "sha256": "dfec60adcc0acc4291979bbb35c84fc00407db8335df4aedf2a0c15ddc1f1d1e"
+        }
+      ],
+      "geometryValidationFile": "ear-validation.json",
+      "validationPresent": true
+    }
+  ],
+  "cancelledHandModelExcluded": true,
+  "cancelledPressureAbdomenBloodModelsExcluded": true
+}

@@ -1,0 +1,15 @@
+.env*
+.data
+artifacts
+design
+docs
+voice
+deployment
+**/*.blend
+**/*.blend1
+**/*.py
+**/source
+public/assets/clinic/blender-candidates/renders
+public/assets/clinic/blender-candidates/furniture/renders
+public/assets/clinic/blender-candidates/anatomy/renders
+같이준비_개발계획서.md

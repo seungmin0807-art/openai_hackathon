@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>진료실 가구와 장비 · Blender</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#244c40;background:#f5f3eb}*{box-sizing:border-box}body{margin:0}main{max-width:1150px;margin:auto;padding:30px 24px 50px}h1{font-size:25px;letter-spacing:-.03em;margin:0 0 9px}p{font-size:15px;line-height:1.7;margin:0 0 20px;color:#627469}.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}button,a,select{font:inherit}select{padding:10px;border:1px solid #c7d5ca;border-radius:10px;background:#fffdf5;color:#375849}label{font-size:14px}button{border:1px solid #c7d5ca;background:#fffdf5;color:#375849;border-radius:10px;padding:10px 15px;cursor:pointer}button[aria-pressed=true]{background:#375849;color:white;border-color:#375849}button:focus-visible,a:focus-visible{outline:3px solid #b28b49;outline-offset:3px}.stage{height:min(66vh,680px);min-height:360px;background:#e5e9df;border:1px solid #d4ddd2;border-radius:18px;overflow:hidden;position:relative}.stage canvas{display:block;width:100%;height:100%;touch-action:none}.hint{position:absolute;bottom:16px;left:20px;font-size:13px;color:#516b5b;pointer-events:none}#status{font-size:13px;margin:12px 0 28px}.renders{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}figure{margin:0}figure img{display:block;width:100%;border-radius:14px}figcaption{padding:9px 2px;font-size:13px;color:#627469}.downloads{display:flex;gap:20px;font-size:14px;margin-top:25px;flex-wrap:wrap}a{color:#346d58} @media(max-width:700px){main{padding:22px 16px}.renders{grid-template-columns:1fr}.stage{height:54vh}}
+</style>
+<main>
+<h1>진료실 가구와 장비</h1>
+<p>침대와 의자, 작업대, 수납장, 창과 커튼까지 실제 진료실에 반영했습니다. 기존 토끼와 의사는 <a href="/">게임 화면</a>에서 그대로 만날 수 있어요.</p>
+<div class="controls"><button data-model="clinic-room" aria-pressed="true">진료실 전체</button><label>가구·장비 확대 <select id="model-select" aria-label="가구·장비 확대"><option value="clinic-room">진료실 전체</option><option value="exam-bed">진찰 침대</option><option value="patient-chair">환자 의자</option><option value="visitor-chair">보호자 의자</option><option value="stool">스툴</option><option value="privacy-screen">가림막</option><option value="storage-cabinet">수납장</option><option value="instrument-workbench">기구 작업대</option><option value="sink-workcounter">싱크 작업대</option><option value="monitor">탁상 모니터</option><option value="diagnostic-holder">벽걸이 기구 받침</option><option value="window-curtains">창과 커튼</option><option value="eye-chart">벽 포스터</option><option value="plant">화분</option><option value="clinic-station">진료 준비 수납장</option><option value="trolley">의료 카트</option><option value="stethoscope">청진기</option><option value="instruments">검사 도구 세트</option><option value="otoscope">이경</option><option value="thermometer">체온계</option><option value="light">펜라이트</option></select></label><button id="reset">시점 초기화</button><a href="/">게임에서 보기 →</a></div>
+<div class="stage" id="stage"><span class="hint">드래그해서 돌려보기 · 휠로 확대</span></div>
+<div id="status" role="status">3D 모델을 불러오는 중입니다.</div>
+<div class="renders"><figure><img src="./exam-furniture/render.png" alt="진찰 침대, 스툴, 보호자 의자와 가림막"><figcaption>침대 · 스툴 · 보호자 의자 · 가림막</figcaption></figure><figure><img src="./room-furniture/render.png" alt="환자 의자와 진료실 수납장, 작업대, 모니터" loading="lazy"><figcaption>환자 의자와 진료실 작업 가구</figcaption></figure><figure><img src="./room-architecture/render.png" alt="창과 주름 커튼, 벽 포스터와 화분" loading="lazy"><figcaption>창 · 커튼 · 벽 포스터 · 화분</figcaption></figure><figure><img src="./render.png" alt="Blender로 렌더한 크림색과 민트색 진료 준비 공간" loading="lazy"><figcaption>수납장과 싱크 · Blender Cycles 렌더</figcaption></figure><figure><img src="./trolley/render.png" alt="트레이와 서랍, 바퀴가 달린 민트색 의료 카트" loading="lazy"><figcaption>작은 의료 카트와 이동식 트레이</figcaption></figure><figure><img src="./instruments/render.png" alt="금속 트레이에 놓인 이경, 체온계와 펜라이트" loading="lazy"><figcaption>이경 · 체온계 · 펜라이트</figcaption></figure><figure><img src="./stethoscope-detail.png" alt="금속 트레이에 누운 청진기의 곡면과 귀 삽입부 확대 렌더" loading="lazy"><figcaption>청진기와 트레이</figcaption></figure></div>
+<div class="downloads"><a href="./clinic-station.glb" download>수납장 GLB</a><a href="./clinic-chair.glb" download>진찰 의자 GLB</a><a href="./trolley/trolley.glb" download>의료 카트 GLB</a><a href="./stethoscope.glb" download>청진기 GLB</a><a href="./instruments/instruments-tray.glb" download>검사 도구 세트 GLB</a><a href="./LICENSE.txt">라이선스·출처</a></div>
+</main>
+<script type="module">
+import * as T from '/vendor/three.js';
+import {preloadClinicFurniture,createClinicFurnitureRoom} from '/clinic-furniture.js';
+const review=window.blenderCandidateReview={ready:false,errors:[],models:{}};
+const host=document.querySelector('#stage'),status=document.querySelector('#status');
+const renderer=new T.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
+renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.82;
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;host.prepend(renderer.domElement);
+const scene=new T.Scene();scene.background=new T.Color('#e5e9df');
+const pmrem=new T.PMREMGenerator(renderer),room=new T.RoomEnvironment();scene.environment=pmrem.fromScene(room,.035).texture;room.dispose();pmrem.dispose();
+scene.environmentIntensity=.8;
+scene.add(new T.HemisphereLight(0xfff5de,0x8b9e8d,1));
+const key=new T.DirectionalLight(0xfff4dd,2.4);key.position.set(-2,5,3);key.castShadow=true;
+Object.assign(key.shadow.camera,{left:-4,right:4,top:4,bottom:-4,near:.1,far:12});key.shadow.mapSize.set(2048,2048);key.shadow.normalBias=.012;scene.add(key);
+const floor=new T.Mesh(new T.PlaneGeometry(200,200),new T.MeshStandardMaterial({color:0xe5e9df,roughness:.8}));floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
+const camera=new T.PerspectiveCamera(36,1,.0001,100);let model,activeName='clinic-room',center=new T.Vector3(),radius=2.4,theta=.55,phi=1.08,pointer=null,loadId=0;
+const modelPaths={'clinic-station':'./clinic-station.glb','stethoscope':'./stethoscope.glb','clinic-chair':'./clinic-chair.glb','trolley':'./trolley/trolley.glb','instruments':'./instruments/instruments-tray.glb','otoscope':'./instruments/otoscope.glb','thermometer':'./instruments/thermometer.glb','light':'./instruments/light.glb'};
+const labels={'clinic-station':'수납장 전체','clinic-chair':'진찰 의자','trolley':'의료 카트','stethoscope':'청진기','instruments':'검사 도구 세트','otoscope':'이경','thermometer':'체온계','light':'펜라이트'};
+for(const name of ['exam-bed','stool','visitor-chair','privacy-screen'])modelPaths[name]='./exam-furniture/'+name+'.glb';
+for(const name of ['patient-chair','storage-cabinet','monitor','diagnostic-holder','instrument-workbench','sink-workcounter'])modelPaths[name]='./room-furniture/'+name+'.glb';
+for(const name of ['window-curtains','eye-chart','plant'])modelPaths[name]='./room-architecture/'+name+'.glb';
+for(const option of document.querySelectorAll('#model-select option'))labels[option.value]=option.textContent;
+const viewPhi=name=>['stethoscope','instruments','thermometer'].includes(name)?.45:1.08;
+const viewTheta=name=>name==='clinic-room'?.08:.55;
+const modelViewPhi=name=>name==='clinic-room'?1.32:viewPhi(name);
+function fitRadius(size){const direction=new T.Vector3(Math.sin(phi)*Math.sin(theta),Math.cos(phi),Math.sin(phi)*Math.cos(theta)),right=new T.Vector3(Math.cos(theta),0,-Math.sin(theta)),up=new T.Vector3().crossVectors(direction,right),tanV=Math.tan(T.MathUtils.degToRad(camera.fov/2)),tanH=tanV*camera.aspect;let distance=0;for(const x of [-1,1])for(const y of [-1,1])for(const z of [-1,1]){const corner=new T.Vector3(size.x*x/2,size.y*y/2,size.z*z/2),depth=corner.dot(direction);distance=Math.max(distance,depth+Math.abs(corner.dot(right))/tanH,depth+Math.abs(corner.dot(up))/tanV)}return Math.max(.05,distance*1.14)}
+function dispose(object){object.traverse(o=>{if(o.isMesh){o.geometry.dispose();for(const mat of Array.isArray(o.material)?o.material:[o.material])mat.dispose()}})}
+function updateCamera(){camera.position.set(center.x+radius*Math.sin(phi)*Math.sin(theta),center.y+radius*Math.cos(phi),center.z+radius*Math.sin(phi)*Math.cos(theta));camera.lookAt(center)}
+function resize(){renderer.setSize(host.clientWidth,host.clientHeight);camera.aspect=host.clientWidth/host.clientHeight;camera.updateProjectionMatrix();if(review.models[activeName]){radius=fitRadius(new T.Vector3(...review.models[activeName].sizeMeters));updateCamera()}}new ResizeObserver(resize).observe(host);resize();
+async function load(name){const id=++loadId;status.textContent='3D 모델을 불러오는 중입니다.';let gltf;if(name==='clinic-room'){await preloadClinicFurniture();gltf={scene:createClinicFurnitureRoom()}}else gltf=await new T.GLTFLoader().loadAsync(modelPaths[name]);if(id!==loadId){dispose(gltf.scene);return}if(model){scene.remove(model);dispose(model)}model=gltf.scene;activeName=name;model.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true}});scene.add(model);model.updateMatrixWorld(true);const fit=model.userData.fitBounds,box=fit?new T.Box3(new T.Vector3(...fit.slice(0,3)),new T.Vector3(...fit.slice(3))):new T.Box3().setFromObject(model),size=box.getSize(new T.Vector3());box.getCenter(center);floor.visible=name!=='clinic-room';floor.position.y=box.min.y-.002;theta=viewTheta(name);phi=modelViewPhi(name);radius=fitRadius(size);updateCamera();review.models[name]={sizeMeters:size.toArray(),bounds:box.min.toArray().concat(box.max.toArray()),meshCount:0};model.traverse(o=>{if(o.isMesh)review.models[name].meshCount++});status.textContent=labels[name]+' · 준비 완료';review.ready=true;document.querySelector('#model-select').value=name;document.querySelectorAll('[data-model]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.model===name)))}
+function fail(e){review.errors.push(String(e));status.textContent='모델을 불러오지 못했습니다: '+String(e)}
+document.querySelectorAll('[data-model]').forEach(b=>b.addEventListener('click',()=>load(b.dataset.model).catch(fail)));
+document.querySelector('#model-select').addEventListener('change',e=>load(e.target.value).catch(fail));
+document.querySelector('#reset').addEventListener('click',()=>{if(!review.models[activeName])return;theta=viewTheta(activeName);phi=modelViewPhi(activeName);radius=fitRadius(new T.Vector3(...review.models[activeName].sizeMeters));updateCamera()});
+renderer.domElement.addEventListener('pointerdown',e=>{pointer={id:e.pointerId,x:e.clientX,y:e.clientY};renderer.domElement.setPointerCapture(e.pointerId)});
+renderer.domElement.addEventListener('pointermove',e=>{if(!pointer||pointer.id!==e.pointerId)return;theta-=(e.clientX-pointer.x)*.007;phi=Math.max(.1,Math.min(1.48,phi+(e.clientY-pointer.y)*.007));pointer.x=e.clientX;pointer.y=e.clientY;updateCamera()});
+for(const event of ['pointerup','pointercancel'])renderer.domElement.addEventListener(event,()=>pointer=null);
+renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();radius=Math.max(.05,Math.min(20,radius*Math.exp(e.deltaY*.001)));updateCamera()},{passive:false});
+renderer.setAnimationLoop(()=>renderer.render(scene,camera));load('clinic-room').catch(fail);
+</script>
+</html>
+

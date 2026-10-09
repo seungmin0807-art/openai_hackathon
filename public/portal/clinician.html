@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="api-base" content=""><meta name="referrer" content="same-origin">
+  <title>진료랑 놀아요! · 의사 방문 설정</title>
+  <link rel="stylesheet" href="/portal/style.css">
+  <script type="module" src="/portal/shared.js"></script>
+</head>
+<body data-role="clinician">
+  <header class="site-header"><a class="brand" href="/">진료랑 놀아요!<span>진료를 알아가는 놀이</span></a><span class="role-badge">의사</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">진료 전, 함께 준비해요</p><h1>아이에게 맞는<br>진찰 순서를 준비해요.</h1><p>방문 정보와 놀이 순서를 설정하고, 아이가 말로 설명한 내용을 확인하세요.</p></section>
+    <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    <section id="login-panel" class="panel login-panel" aria-labelledby="login-title">
+      <h2 id="login-title">의사 화면 연결</h2><p>병원에서 받은 의사 접근 코드를 입력하세요.</p>
+      <form id="login-form"><label for="access-code">접근 코드</label><div class="input-action"><input id="access-code" name="accessCode" type="password" autocomplete="off" required maxlength="256"><button type="submit">연결하기</button></div></form>
+    </section>
+    <div id="dashboard" hidden>
+      <div class="section-heading"><h2>방문 설정</h2><button id="refresh" type="button" class="secondary">새로고침</button></div>
+      <form id="visit-form" class="editor-layout">
+        <section class="panel"><h3><span class="step-number">1</span>아이와 방문 정보</h3>
+          <div class="field-row"><div><label for="nickname">아이 별명</label><input id="nickname" required maxlength="20" autocomplete="off" placeholder="예: 도담"></div><div><label for="age">나이</label><input id="age" type="number" min="2" max="12" step="1" value="5" required><span class="field-help">2–12세</span></div></div>
+          <fieldset><legend>이번 방문에서 알아볼 내용</legend><div id="concerns" class="check-grid"></div></fieldset>
+          <p class="field-help">선택한 내용이 검사 순서를 자동으로 바꾸지는 않아요.</p>
+        </section>
+        <section class="panel"><h3><span class="step-number">2</span>진찰 놀이 순서</h3>
+          <p class="field-help">의사가 정한 순서대로 게임에서 진행해요.</p>
+          <ol id="steps" class="sequence" aria-label="진찰 순서"></ol>
+          <div class="input-action"><label class="sr-only" for="add-step">추가할 진찰 놀이</label><select id="add-step"></select><button id="append-step" type="button" class="secondary">추가</button></div>
+          <fieldset id="auscultation-fieldset"><legend>청진할 부위</legend><div id="auscultation-sites" class="check-grid"></div></fieldset>
+        </section>
+        <div class="save-bar"><p id="visit-version" class="field-help"></p><button id="save-visit" type="submit">게임에 방문 설정 저장</button></div>
+      </form>
+      <section class="report-section" aria-labelledby="report-title"><div class="section-heading"><h2 id="report-title">놀이 후, 아이의 이야기</h2><span id="report-count" class="field-help"></span></div><div id="reports" class="report-list"></div></section>
+    </div>
+  </main><footer>진료랑 놀아요!의 놀이 기록은 검사 결과나 진단이 아닙니다.</footer>
+</body></html>

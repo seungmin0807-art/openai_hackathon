@@ -1,0 +1,8 @@
+{
+  "concurrent_clients": 2,
+  "successful_mcp_initializations": 2,
+  "successful_scene_calls": 2,
+  "blender_startups": 1,
+  "port": 9879,
+  "blender_pid": 18400
+}
